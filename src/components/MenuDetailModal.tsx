@@ -51,7 +51,7 @@ export function MenuDetailModal({ item, menuItems, onClose, onItemClick }: MenuD
         exit={{ opacity: 0, y: 100 }}
         transition={{ type: "spring", damping: 30, stiffness: 300 }}
         className="relative rounded-t-3xl w-full max-h-[85vh] overflow-y-auto shadow-2xl"
-        style={{ backgroundColor: '#eeecdd', background: '#eeecdd' }}
+        style={{ backgroundColor: '#eeecdd' }}
       >
           {/* Close button */}
           <button

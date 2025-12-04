@@ -28,7 +28,7 @@ const iconMap = {
 
 export function CategoryTabs({ selectedCategory, onSelectCategory }: CategoryTabsProps) {
   return (
-    <div className="sticky top-0 z-40 bg-[#eeecdd] border-b border-[#212529]/10 shadow-sm">
+    <div className="sticky top-0 z-40 border-b border-[#212529]/10 shadow-sm" style={{ backgroundColor: '#eeecdd' }}>
       <div className="overflow-x-auto scrollbar-hide">
         <div className="flex gap-2 px-3 py-2.5 min-w-max">
           {categories.map((category) => {
