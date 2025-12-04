@@ -1,6 +1,8 @@
+import React, { useEffect } from 'react';
 import { motion } from 'motion/react';
-import { useEffect } from 'react';
-import loadLogo from '../assets/load-logo.svg';
+
+const baseUrl = (import.meta as any).env?.BASE_URL || '/sapiens/';
+const loadLogoUrl = `${baseUrl}load-logo.svg`;
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -40,9 +42,10 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
           className="relative"
         >
           <img 
-            src={loadLogo} 
+            src={loadLogoUrl}
             alt="Sapiens" 
-            className="w-40 h-auto max-w-[200px]"
+            className="w-64 h-auto"
+            style={{ width: '280px', height: 'auto', maxWidth: '100%' }}
           />
         </motion.div>
       </div>
