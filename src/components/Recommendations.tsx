@@ -55,8 +55,8 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
       findDishByKeywords(['судак', 'чёрный рис']) || findDishByKeywords(['судак', 'черный рис']) || findDishByKeywords(['судак', 'ризотто']) || findDishByKeywords(['полба', 'судак', 'рис']),
     ].filter((item): item is MenuItem => item !== null);
 
-    // Фирменное блюдо - маринованные креветки
-    const signatureDish = findDishByName('Маринованные креветки');
+    // Фирменное блюдо - шаурма
+    const signatureDish = findDishByName('Шаурма') || findDishByName('шаурма');
     
     return {
       popular: popularDishes.slice(0, 3), // Биохакинг - конкретные 3 блюда
