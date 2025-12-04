@@ -56,7 +56,7 @@ export function Recommendations({ menuItems, onItemClick }: RecommendationsProps
   }, [menuItems]);
 
   return (
-    <div className="max-w-6xl mx-auto px-3 py-4">
+    <div className="max-w-6xl mx-auto px-3 py-4" style={{ backgroundColor: '#eeecdd' }}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -122,7 +122,9 @@ export function Recommendations({ menuItems, onItemClick }: RecommendationsProps
                     </div>
                     
                     <div className="flex items-center justify-between mt-2">
-                      <span className="text-[#212529] text-sm">{item.price} ₽</span>
+                      <div className="px-3 py-1.5 rounded-full text-sm" style={{ backgroundColor: '#212529', color: '#eeecdd' }}>
+                        <span style={{ color: '#eeecdd' }}>{item.price} ₽</span>
+                      </div>
                       <motion.button
                         whileTap={{ scale: 0.95 }}
                         className="bg-[#212529] text-[#eeecdd] px-3 py-1.5 rounded-lg text-xs"

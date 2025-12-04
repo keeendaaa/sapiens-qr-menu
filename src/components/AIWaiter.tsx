@@ -38,7 +38,7 @@ export function AIWaiter({ menuItems, onItemClick }: AIWaiterProps) {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Здравствуйте! Я ваш AI-помощник в ресторане "Ван Гоги". Могу помочь с выбором блюд, ответить на вопросы о меню или порекомендовать что-то особенное. Чем могу быть полезен?',
+      text: 'Здравствуйте! Я ваш AI-помощник в ресторане "Sapiens". Могу помочь с выбором блюд, ответить на вопросы о меню или порекомендовать что-то особенное. Чем могу быть полезен?',
       sender: 'ai',
       timestamp: new Date(),
     },
@@ -278,9 +278,9 @@ export function AIWaiter({ menuItems, onItemClick }: AIWaiterProps) {
                             <h4 className="text-[#212529] text-sm font-medium line-clamp-1 mb-1">
                               {item.name}
                             </h4>
-                            <p className="text-[#212529] text-xs font-semibold">
-                              {item.price} ₽
-                            </p>
+                            <div className="px-2 py-1 rounded-full text-xs inline-block" style={{ backgroundColor: '#212529', color: '#eeecdd' }}>
+                              <span style={{ color: '#eeecdd' }}>{item.price} ₽</span>
+                            </div>
                           </div>
                         </div>
                       </motion.div>
