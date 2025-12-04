@@ -125,7 +125,7 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
                 <div className="p-4 flex-1 flex flex-col min-h-0">
                   <h3 className="font-medium mb-1.5 line-clamp-2" style={{ color: '#212529' }}>{item.name}</h3>
                   {item.description && (
-                    <p className="text-sm line-clamp-3 flex-1" style={{ color: '#212529', opacity: 0.7 }}>{item.description.replace(/^\s*\*\s*/gm, '').trim()}</p>
+                    <p className="text-sm line-clamp-2 flex-1" style={{ color: '#212529', opacity: 0.7 }}>{item.description.replace(/^\s*\*\s*/gm, '').trim()}</p>
                   )}
                 </div>
               </motion.div>
@@ -187,7 +187,7 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
               <div className="p-4 flex flex-col flex-1 min-h-0">
                 <h3 className="text-sm font-medium mb-2 line-clamp-2" style={{ color: '#212529' }}>{item.name}</h3>
                 {item.description && (
-                  <p className="text-xs mb-3 line-clamp-3 flex-1" style={{ color: '#212529', opacity: 0.7 }}>{item.description.replace(/^\s*\*\s*/gm, '').trim()}</p>
+                  <p className="text-xs mb-3 line-clamp-2 flex-1" style={{ color: '#212529', opacity: 0.7 }}>{item.description.replace(/^\s*\*\s*/gm, '').trim()}</p>
                 )}
                 {item.price !== undefined && (
                   <span className="text-sm font-semibold mt-auto" style={{ color: '#212529' }}>{item.price} ₽</span>
@@ -257,7 +257,7 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
                 <div className="p-4 flex flex-col flex-1 min-h-0">
                   <h3 className="font-medium mb-1.5 line-clamp-2" style={{ color: '#212529' }}>{item.name}</h3>
                   {item.description && (
-                    <p className="text-sm line-clamp-3 flex-1" style={{ color: '#212529', opacity: 0.7 }}>{item.description.replace(/^\s*\*\s*/gm, '').trim()}</p>
+                    <p className="text-sm line-clamp-2 flex-1" style={{ color: '#212529', opacity: 0.7 }}>{item.description.replace(/^\s*\*\s*/gm, '').trim()}</p>
                   )}
                 </div>
               </motion.div>
