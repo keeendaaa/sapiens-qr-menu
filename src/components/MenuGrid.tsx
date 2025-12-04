@@ -10,7 +10,7 @@ interface MenuGridProps {
 
 export function MenuGrid({ items, onItemClick }: MenuGridProps) {
   return (
-    <div className="max-w-6xl mx-auto px-3 py-4">
+    <div className="max-w-6xl mx-auto px-3 py-4" style={{ backgroundColor: '#eeecdd' }}>
       <motion.div 
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
         initial={{ opacity: 0 }}

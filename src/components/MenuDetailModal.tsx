@@ -88,8 +88,8 @@ export function MenuDetailModal({ item, menuItems, onClose, onItemClick }: MenuD
           <div className="p-5">
             <div className="flex items-start justify-between gap-3 mb-3">
               <h2 className="text-[#212529]">{item.name}</h2>
-              <div className="bg-[#212529] text-[#eeecdd] px-3 py-1.5 rounded-full shrink-0 text-sm">
-                <span>{item.price} ₽</span>
+              <div className="px-3 py-1.5 rounded-full shrink-0 text-sm" style={{ backgroundColor: '#212529', color: '#eeecdd' }}>
+                <span style={{ color: '#eeecdd' }}>{item.price} ₽</span>
               </div>
             </div>
 

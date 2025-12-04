@@ -52,7 +52,8 @@ export function MenuCard({ item, imageUrl, onClick }: MenuCardProps) {
 
         {/* Price badge */}
         <motion.div
-          className="absolute top-3 right-3 bg-[#212529] text-[#eeecdd] px-3 py-1.5 rounded-full shadow-lg text-sm"
+          className="absolute top-3 right-3 px-3 py-1.5 rounded-full shadow-lg text-sm"
+          style={{ backgroundColor: '#212529', color: '#eeecdd' }}
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ 
@@ -62,7 +63,7 @@ export function MenuCard({ item, imageUrl, onClick }: MenuCardProps) {
             delay: 0.1
           }}
         >
-          <span>{item.price} ₽</span>
+          <span style={{ color: '#eeecdd' }}>{item.price} ₽</span>
         </motion.div>
       </div>
 
