@@ -185,7 +185,7 @@ export function AIWaiter({ menuItems, onItemClick }: AIWaiterProps) {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto px-3 py-4 h-[calc(100vh-140px)] flex flex-col">
+    <div className="max-w-4xl mx-auto px-3 py-4 h-[calc(100vh-140px)] flex flex-col" style={{ backgroundColor: '#eeecdd' }}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
