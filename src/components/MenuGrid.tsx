@@ -28,6 +28,7 @@ export function MenuGrid({ items, onItemClick }: MenuGridProps) {
               duration: 0.4,
               ease: "easeOut"
             }}
+            className="h-full"
           >
             <MenuCard 
               item={item} 

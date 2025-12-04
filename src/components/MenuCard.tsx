@@ -1,7 +1,7 @@
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { MenuItem } from './types';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { useState } from 'react';
 
 interface MenuCardProps {
   item: MenuItem;
@@ -48,7 +48,7 @@ export function MenuCard({ item, imageUrl, onClick }: MenuCardProps) {
         )}
 
         {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
         {/* Price badge */}
         {item.price !== undefined && (
@@ -75,7 +75,7 @@ export function MenuCard({ item, imageUrl, onClick }: MenuCardProps) {
         
         {item.description && (
           <p className="text-[#212529]/70 text-sm line-clamp-2">
-            {item.description}
+            {item.description.replace(/^\s*\*\s*/gm, '').trim()}
           </p>
         )}
       </div>

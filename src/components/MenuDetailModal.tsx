@@ -21,6 +21,17 @@ export function MenuDetailModal({ item, menuItems, onClose, onItemClick }: MenuD
     };
   }, []);
 
+  // Функция для очистки текста от звездочек
+  const cleanText = (text: string | null | undefined): string => {
+    if (!text) return '';
+    // Убираем звездочки в начале строк и лишние пробелы
+    return text
+      .split('\n')
+      .map(line => line.replace(/^\s*\*\s*/, '').trim())
+      .filter(line => line.length > 0)
+      .join('\n');
+  };
+
   // Находим похожие блюда из той же категории
   const similarItems = useMemo(() => {
     const sameCategory = menuItems.filter(
@@ -96,9 +107,30 @@ export function MenuDetailModal({ item, menuItems, onClose, onItemClick }: MenuD
             </div>
 
             {item.description && (
-              <p className="text-[#212529]/70 mb-5 text-sm">
-                {item.description}
-              </p>
+              <div className="mb-5">
+                <h3 className="text-[#212529] font-semibold mb-2 text-sm">Описание</h3>
+                <p className="text-[#212529]/70 text-sm leading-relaxed">
+                  {cleanText(item.description)}
+                </p>
+              </div>
+            )}
+
+            {item.composition && (
+              <div className="mb-5">
+                <h3 className="text-[#212529] font-semibold mb-2 text-sm">Состав</h3>
+                <div className="text-[#212529]/70 text-sm whitespace-pre-line leading-relaxed">
+                  {cleanText(item.composition)}
+                </div>
+              </div>
+            )}
+
+            {item.allergens && (
+              <div className="mb-5">
+                <h3 className="text-[#212529] font-semibold mb-2 text-sm">Аллергены</h3>
+                <p className="text-[#212529]/70 text-sm leading-relaxed">
+                  {cleanText(item.allergens)}
+                </p>
+              </div>
             )}
 
             {/* Похожие блюда */}

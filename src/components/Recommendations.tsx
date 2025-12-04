@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { MenuItem } from './types';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { TrendingUp, ChefHat, Clock, Award } from 'lucide-react';
+import { getMenuImageUrl } from '../utils/imageUtils';
 
 interface RecommendationsProps {
   onItemClick: (item: MenuItem) => void;
@@ -31,11 +32,28 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
       };
     }
 
+    // Функция для определения блюд, связанных с шефом
+    const isChefDish = (item: MenuItem): boolean => {
+      const name = item.name?.toLowerCase() || '';
+      const description = item.description?.toLowerCase() || '';
+      const composition = item.composition?.toLowerCase() || '';
+      const text = `${name} ${description} ${composition}`;
+      
+      // Ищем ключевые слова, указывающие на блюдо шефа
+      return /шеф|от шефа|фирменн|авторск/i.test(text);
+    };
+
+    // Фильтруем блюда шефа
+    const chefDishes = menuItems.filter(isChefDish);
+    
     const shuffled = shuffleArray(menuItems);
+    const shuffledChef = shuffleArray(chefDishes);
     
     return {
       popular: shuffled.slice(0, 3), // Хиты недели - 3 случайных блюда
-      chef: shuffled.slice(3, 5), // Выбор шеф-повара - 2 случайных блюда
+      chef: shuffledChef.length > 0
+        ? shuffledChef.slice(0, Math.min(2, shuffledChef.length)) // Выбор шеф-повара - только блюда, связанные с шефом (максимум 2)
+        : [], // Если нет блюд шефа, не показываем раздел
       quick: shuffled.slice(5, 7), // Быстрые блюда - 2 случайных блюда
       signature: shuffled.slice(7, 8), // Фирменное блюдо - 1 случайное блюдо
     };
@@ -79,13 +97,13 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.4 }}
                 onClick={() => onItemClick(item)}
-                className="flex-shrink-0 w-64 h-64 rounded-2xl overflow-hidden shadow-md active:scale-95 transition-transform cursor-pointer flex flex-col"
+                className="flex-shrink-0 w-64 rounded-2xl overflow-hidden shadow-md active:scale-95 transition-transform cursor-pointer flex flex-col"
                 style={{ backgroundColor: '#eeecdd' }}
               >
-                <div className="relative w-full h-48 flex-shrink-0 overflow-hidden">
-                    {false ? (
+                <div className="relative w-full h-48 flex-shrink-0 overflow-hidden bg-gradient-to-br from-[#212529]/5 to-[#eeecdd]">
+                    {item.image ? (
                       <ImageWithFallback
-                        src=""
+                        src={getMenuImageUrl(item.image)}
                         alt={item.name}
                         className="w-full h-full object-cover"
                       />
@@ -104,9 +122,11 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
                     </div>
                   )}
                 </div>
-                <div className="p-4 flex-1 flex flex-col justify-center min-h-0" style={{ height: '64px' }}>
-                  <h3 className="font-medium mb-1 line-clamp-1" style={{ color: '#212529' }}>{item.name}</h3>
-                  <p className="text-sm line-clamp-1" style={{ color: '#212529', opacity: 0.7 }}>{item.description || ''}</p>
+                <div className="p-4 flex-1 flex flex-col min-h-0">
+                  <h3 className="font-medium mb-1.5 line-clamp-2" style={{ color: '#212529' }}>{item.name}</h3>
+                  {item.description && (
+                    <p className="text-sm line-clamp-3 flex-1" style={{ color: '#212529', opacity: 0.7 }}>{item.description.replace(/^\s*\*\s*/gm, '').trim()}</p>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -115,37 +135,38 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
       </motion.div>
 
       {/* Chef's Choice Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-        className="mb-8"
-      >
-        <div className="flex items-center gap-3 mb-4">
-          <div className="p-2.5 rounded-xl shadow-lg" style={{ backgroundColor: '#212529' }}>
-            <ChefHat className="w-5 h-5" style={{ color: '#eeecdd' }} />
+      {recommendations.chef.length > 0 && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="mb-8"
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-2.5 rounded-xl shadow-lg" style={{ backgroundColor: '#212529' }}>
+              <ChefHat className="w-5 h-5" style={{ color: '#eeecdd' }} />
+            </div>
+            <div>
+              <h2 className="text-xl font-semibold" style={{ color: '#212529' }}>Выбор шеф-повара</h2>
+              <p className="text-xs" style={{ color: '#212529', opacity: 0.7 }}>Авторские рецепты</p>
+            </div>
           </div>
-          <div>
-            <h2 className="text-xl font-semibold" style={{ color: '#212529' }}>Выбор шеф-повара</h2>
-            <p className="text-xs" style={{ color: '#212529', opacity: 0.7 }}>Авторские рецепты</p>
-          </div>
-        </div>
 
-        <div className="grid grid-cols-2 gap-3">
+          <div className={recommendations.chef.length === 1 ? "grid grid-cols-1 gap-3" : "grid grid-cols-2 gap-3"}>
           {recommendations.chef.map((item, index) => (
             <motion.div
               key={item.id}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 + index * 0.1, duration: 0.4 }}
-              onClick={() => onItemClick(item)}
-              className="rounded-xl overflow-hidden shadow-md active:scale-95 transition-transform cursor-pointer"
-              style={{ backgroundColor: '#eeecdd' }}
-            >
-              <div className="relative h-32 overflow-hidden">
-                {false ? (
+            onClick={() => onItemClick(item)}
+            className="rounded-xl overflow-hidden shadow-md active:scale-95 transition-transform cursor-pointer flex flex-col"
+            style={{ backgroundColor: '#eeecdd' }}
+          >
+            <div className="relative w-full h-48 overflow-hidden flex-shrink-0 bg-gradient-to-br from-[#212529]/5 to-[#eeecdd]">
+                {item.image ? (
                   <ImageWithFallback
-                    src=""
+                    src={getMenuImageUrl(item.image)}
                     alt={item.name}
                     className="w-full h-full object-cover"
                   />
@@ -163,17 +184,20 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
                   <span>Шеф</span>
                 </div>
               </div>
-              <div className="p-3">
-                <h3 className="text-sm font-medium mb-1 line-clamp-1" style={{ color: '#212529' }}>{item.name}</h3>
-                <p className="text-xs mb-2 line-clamp-2" style={{ color: '#212529', opacity: 0.7 }}>{item.description}</p>
+              <div className="p-4 flex flex-col flex-1 min-h-0">
+                <h3 className="text-sm font-medium mb-2 line-clamp-2" style={{ color: '#212529' }}>{item.name}</h3>
+                {item.description && (
+                  <p className="text-xs mb-3 line-clamp-3 flex-1" style={{ color: '#212529', opacity: 0.7 }}>{item.description.replace(/^\s*\*\s*/gm, '').trim()}</p>
+                )}
                 {item.price !== undefined && (
-                  <span style={{ color: '#212529' }}>{item.price} ₽</span>
+                  <span className="text-sm font-semibold mt-auto" style={{ color: '#212529' }}>{item.price} ₽</span>
                 )}
               </div>
             </motion.div>
           ))}
-        </div>
-      </motion.div>
+          </div>
+        </motion.div>
+      )}
 
       {/* Quick Meals Section */}
       <motion.div
@@ -201,13 +225,13 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 + index * 0.1, duration: 0.4 }}
                 onClick={() => onItemClick(item)}
-                className="flex-shrink-0 w-64 rounded-2xl overflow-hidden shadow-md active:scale-95 transition-transform cursor-pointer"
-                style={{ backgroundColor: '#eeecdd' }}
-              >
-                <div className="relative h-40 overflow-hidden">
-                  {false ? (
+              className="flex-shrink-0 w-64 rounded-2xl overflow-hidden shadow-md active:scale-95 transition-transform cursor-pointer flex flex-col"
+              style={{ backgroundColor: '#eeecdd' }}
+            >
+              <div className="relative w-full h-48 overflow-hidden flex-shrink-0 bg-gradient-to-br from-[#212529]/5 to-[#eeecdd]">
+                  {item.image ? (
                     <ImageWithFallback
-                      src=""
+                      src={getMenuImageUrl(item.image)}
                       alt={item.name}
                       className="w-full h-full object-cover"
                     />
@@ -230,9 +254,11 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
                     <span>15 мин</span>
                   </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-medium mb-1 line-clamp-1" style={{ color: '#212529' }}>{item.name}</h3>
-                  <p className="text-sm line-clamp-2" style={{ color: '#212529', opacity: 0.7 }}>{item.description || ''}</p>
+                <div className="p-4 flex flex-col flex-1 min-h-0">
+                  <h3 className="font-medium mb-1.5 line-clamp-2" style={{ color: '#212529' }}>{item.name}</h3>
+                  {item.description && (
+                    <p className="text-sm line-clamp-3 flex-1" style={{ color: '#212529', opacity: 0.7 }}>{item.description.replace(/^\s*\*\s*/gm, '').trim()}</p>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -269,10 +295,10 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
               borderColor: 'rgba(33, 37, 41, 0.2)'
             }}
           >
-            <div className="relative h-48 overflow-hidden">
-              {false ? (
+            <div className="relative w-full h-48 overflow-hidden bg-gradient-to-br from-[#212529]/5 to-[#eeecdd]">
+              {item.image ? (
                 <ImageWithFallback
-                  src=""
+                  src={getMenuImageUrl(item.image)}
                   alt={item.name}
                   className="w-full h-full object-cover"
                 />
@@ -291,14 +317,16 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
                 <span>Фирменное блюдо</span>
               </div>
               <div className="absolute bottom-3 left-3 right-3">
-                <h3 className="mb-1 font-medium" style={{ color: '#eeecdd' }}>{item.name}</h3>
-                <p className="text-sm" style={{ color: '#eeecdd', opacity: 0.9 }}>{item.description}</p>
+                <h3 className="mb-1.5 font-medium line-clamp-2" style={{ color: '#eeecdd' }}>{item.name}</h3>
+                {item.description && (
+                  <p className="text-sm line-clamp-2" style={{ color: '#eeecdd', opacity: 0.9 }}>{item.description.replace(/^\s*\*\s*/gm, '').trim()}</p>
+                )}
               </div>
             </div>
-            <div className="p-4" style={{ backgroundColor: '#eeecdd' }}>
+            <div className="p-4 flex-shrink-0" style={{ backgroundColor: '#eeecdd' }}>
               <div className="flex items-center justify-between">
                 {item.price !== undefined && (
-                  <span style={{ color: '#212529' }}>{item.price} ₽</span>
+                  <span className="text-sm font-semibold" style={{ color: '#212529' }}>{item.price} ₽</span>
                 )}
                 <span className="text-xs" style={{ color: '#212529', opacity: 0.6 }}>Нажмите для подробностей</span>
               </div>
