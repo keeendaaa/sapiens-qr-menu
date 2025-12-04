@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { MenuItem } from './types';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { cleanText } from '../utils/textUtils';
 
 interface MenuCardProps {
   item: MenuItem;
@@ -75,7 +76,7 @@ export function MenuCard({ item, imageUrl, onClick }: MenuCardProps) {
         
         {item.description && (
           <p className="text-[#212529]/70 text-sm line-clamp-2">
-            {item.description.replace(/^\s*\*\s*/gm, '').trim()}
+            {cleanText(item.description)}
           </p>
         )}
       </div>

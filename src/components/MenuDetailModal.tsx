@@ -4,6 +4,7 @@ import { MenuItem } from './types';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { X } from 'lucide-react';
 import { getMenuImageUrl } from '../utils/imageUtils';
+import { cleanText } from '../utils/textUtils';
 
 interface MenuDetailModalProps {
   item: MenuItem;
@@ -20,17 +21,6 @@ export function MenuDetailModal({ item, menuItems, onClose, onItemClick }: MenuD
       document.body.style.overflow = 'unset';
     };
   }, []);
-
-  // Функция для очистки текста от звездочек
-  const cleanText = (text: string | null | undefined): string => {
-    if (!text) return '';
-    // Убираем звездочки в начале строк и лишние пробелы
-    return text
-      .split('\n')
-      .map(line => line.replace(/^\s*\*\s*/, '').trim())
-      .filter(line => line.length > 0)
-      .join('\n');
-  };
 
   // Находим похожие блюда из той же категории
   const similarItems = useMemo(() => {
