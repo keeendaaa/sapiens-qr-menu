@@ -1,0 +1,773 @@
+{
+  "title": "МЕНЮ РЕСТОРАНА ВАН ГОГИ",
+  "source_file": "/Users/kenda/menu/МЕНЮ_РЕСТОРАНА_ВАН_ГОГИ_актуальное.docx",
+  "generated_at": "2025-11-30T22:36:09.187297+00:00",
+  "sections": [
+    {
+      "title": "ЗАКУСКИ",
+      "items": [
+        {
+          "name": "Бакинские томаты с имеретинским сыром и соусом песто",
+          "portion": "210 г",
+          "price_text": "Цена:325 ₽",
+          "price": {
+            "value": 325,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Бакинские томаты с имеретинским сыром и соусом песто.png"
+          ],
+          "source_paragraph": 2
+        },
+        {
+          "name": "Сельдь с теплым картофелем и луком",
+          "portion": "250 г",
+          "price_text": "Цена: 295 ₽",
+          "price": {
+            "value": 295,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Сельдь с теплым картофелем и луком.png"
+          ],
+          "source_paragraph": 6
+        },
+        {
+          "name": "Ассорти из грузинского домашнего сыра",
+          "portion": "200 г",
+          "price_text": "Цена: 685 ₽",
+          "price": {
+            "value": 685,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Ассорти из грузинского домашнего сыра.png"
+          ],
+          "source_paragraph": 10
+        },
+        {
+          "name": "Грузинские соленья",
+          "portion": "250 г",
+          "price_text": "Цена: 410 ₽",
+          "price": {
+            "value": 410,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Грузинские соленья.png"
+          ],
+          "source_paragraph": 14
+        },
+        {
+          "name": "Ассорти из свежих овощей",
+          "portion": "200 г",
+          "price_text": "Цена: 375 ₽",
+          "price": {
+            "value": 375,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Ассорти из свежих овощей.png"
+          ],
+          "source_paragraph": 18
+        },
+        {
+          "name": "Тарелка к пиву",
+          "portion": "330 г",
+          "price_text": "Цена: 525 ₽",
+          "price": {
+            "value": 525,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Тарелка к пиву.png"
+          ],
+          "source_paragraph": 22
+        },
+        {
+          "name": "Мясное плато",
+          "portion": "300 г",
+          "price_text": "Цена: 855 ₽",
+          "price": {
+            "value": 855,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Мясное плато.jpg"
+          ],
+          "source_paragraph": 26
+        },
+        {
+          "name": "Хрустящие баклажаны с соусом Тай Чили",
+          "portion": "300 г",
+          "price_text": "Цена: 465 ₽",
+          "price": {
+            "value": 465,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Хрустящие баклажаны с соусом Тай Чили.png"
+          ],
+          "source_paragraph": 30
+        },
+        {
+          "name": "Ассорти пхали",
+          "portion": "270 г",
+          "price_text": "Цена: 610 ₽",
+          "price": {
+            "value": 610,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Ассорти пхали.png"
+          ],
+          "source_paragraph": 34
+        },
+        {
+          "name": "Рулетики из баклажанов с начинкой из грецких орехов",
+          "portion": "270 г",
+          "price_text": "Цена: 435 ₽",
+          "price": {
+            "value": 435,
+            "currency": "₽"
+          },
+          "photos": [ 
+            "/menu/Рулетики из баклажанов с начинкой из грецких орехов.png"
+          ],
+          "source_paragraph": 38
+        },
+        {
+          "name": "Рулетики из баклажанов с начинкой из творожного сыра и чеснока",
+          "portion": "270 г",
+          "price_text": "Цена: 435 ₽",
+          "price": {
+            "value": 435,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Рулетики из баклажанов с начинкой из творожного сыра и чеснока.webp"
+          ],
+          "source_paragraph": 42
+        },
+        {
+          "name": "Шампиньоны запечённые с сыром",
+          "portion": "200 г",
+          "price_text": "Цена: 425 ₽",
+          "price": {
+            "value": 425,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Шампиньоны запечённые с сыром.png"
+          ],
+          "source_paragraph": 47
+        },
+        {
+          "name": "Сырные палочки в хрустящей панировке",
+          "portion": "180 г",
+          "price_text": "Цена: 335 ₽",
+          "price": {
+            "value": 335,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Сырные палочки в хрустящей панировке.png"
+          ],
+          "source_paragraph": 51
+        },
+        {
+          "name": "Салат из бакинских томатов и огурцов",
+          "portion": "280 г",
+          "price_text": "Цена: 415 ₽",
+          "price": {
+            "value": 415,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Салат из бакинских томатов и огурцов.png"
+          ],
+          "source_paragraph": 55
+        },
+        {
+          "name": "Цезарь с курицей",
+          "portion": "210 г",
+          "price_text": "Цена: 435 ₽",
+          "price": {
+            "value": 435,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Цезарь с курицей.png"
+          ],
+          "source_paragraph": 59
+        },
+        {
+          "name": "Цезарь с креветками",
+          "portion": "200 г",
+          "price_text": "Цена: 545 ₽",
+          "price": {
+            "value": 545,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Цезарь с креветками.png"
+          ],
+          "source_paragraph": 63
+        },
+        {
+          "name": "Фирменный Салат Ван Гоги",
+          "portion": "230 г",
+          "price_text": "Цена: 585 ₽",
+          "price": {
+            "value": 585,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Фирменный Салат Ван Гоги.png"
+          ],
+          "source_paragraph": 67
+        },
+        {
+          "name": "Теплый салат с языком",
+          "portion": "200 г",
+          "price_text": "Цена: 525 ₽",
+          "price": {
+            "value": 525,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Теплый салат с языком.png"
+          ],
+          "source_paragraph": 71
+        },
+        {
+          "name": "Салат Тбилиси от Шеф-повара",
+          "portion": "200 г",
+          "price_text": "Цена: 495 ₽",
+          "price": {
+            "value": 495,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Салат Тбилиси от Шеф-повара.png"
+          ],
+          "source_paragraph": 75
+        },
+        {
+          "name": "Салат из хрустящих баклажанов с сыром Страчателла",
+          "portion": "220 г",
+          "price_text": "Цена: 665 ₽",
+          "price": {
+            "value": 665,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Салат из хрустящих баклажанов с сыром Страчателла.png"
+          ],
+          "source_paragraph": 79
+        },
+        {
+          "name": "Харчо",
+          "portion": "300 г",
+          "price_text": "Цена: 400 ₽",
+          "price": {
+            "value": 400,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Харчо.png"
+          ],
+          "source_paragraph": 83
+        },
+        {
+          "name": "Кюфта по-Турецки с нутом",
+          "portion": "400 г",
+          "price_text": "Цена: 425 ₽",
+          "price": {
+            "value": 425,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Кюфта по-Турецки с нутом.png"
+          ],
+          "source_paragraph": 87
+        },
+        {
+          "name": "Борщ с салом и чесночком",
+          "portion": "300/200 г",
+          "price_text": "Цена: 395 ₽",
+          "price": {
+            "value": 395,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Борщ с салом и чесночком.png"
+          ],
+          "source_paragraph": 91
+        },
+        {
+          "name": "Суп тыквенный",
+          "portion": "350 г",
+          "price_text": "Цена: 355 ₽",
+          "price": {
+            "value": 355,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Суп тыквенный.png"
+          ],
+          "source_paragraph": 95
+        },
+        {
+          "name": "Куриный суп с домашней лапшой",
+          "portion": "350 г",
+          "price_text": "Цена: 325 ₽",
+          "price": {
+            "value": 325,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Куриный суп с домашней лапшой.png"
+          ],
+          "source_paragraph": 99
+        }
+      ]
+    },
+    {
+      "title": "Хинкали",
+      "items": [
+        {
+          "name": "Хинкали с говядиной и свининой",
+          "portion": "3 шт",
+          "price_text": "Цена: 300 ₽",
+          "price": {
+            "value": 300,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Хинкали с говядиной и свининой.png"
+          ],
+          "source_paragraph": 104
+        },
+        {
+          "name": "Хинкали с телятиной",
+          "portion": "3 шт",
+          "price_text": "Цена: 300 ₽",
+          "price": {
+            "value": 300,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Хинкали с телятиной.png"
+          ],
+          "source_paragraph": 108
+        },
+        {
+          "name": "Хинкали с бараниной",
+          "portion": "3 шт",
+          "price_text": "Цена: 300 ₽",
+          "price": {
+            "value": 300,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Хинкали с бараниной.png"
+          ],
+          "source_paragraph": 112
+        },
+        {
+          "name": "Хинкали с бараниной и брынзой",
+          "portion": "3 шт",
+          "price_text": "Цена: 300 ₽",
+          "price": {
+            "value": 300,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Хинкали с бараниной и брынзой.png"
+          ],
+          "source_paragraph": 116
+        },
+        {
+          "name": "Хинкали с грибами",
+          "portion": "3 шт",
+          "price_text": "Цена: 300 ₽",
+          "price": {
+            "value": 300,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Хинкали с грибами.png"
+          ],
+          "source_paragraph": 120
+        },
+        {
+          "name": "Хинкали с сыром",
+          "portion": "3 шт",
+          "price_text": "Цена: 300 ₽",
+          "price": {
+            "value": 300,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Хинкали с сыром.png"
+          ],
+          "source_paragraph": 124
+        }
+      ]
+    },
+    {
+      "title": "Горячие блюда",
+      "items": [
+        {
+          "name": "Буглама из ягненка",
+          "portion": "350 г",
+          "price_text": "Цена: 795₽",
+          "price": {
+            "value": 795,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Буглама из ягненка.png"
+          ],
+          "source_paragraph": 131
+        },
+        {
+          "name": "Говурма из ягнёнка",
+          "portion": "350 г",
+          "price_text": "Цена: 785 ₽",
+          "price": {
+            "value": 785,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Говурма из ягнёнка.png"
+          ],
+          "source_paragraph": 135
+        },
+        {
+          "name": "Долма",
+          "portion": "250 г",
+          "price_text": "Цена: 675 ₽",
+          "price": {
+            "value": 675,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Долма.png"
+          ],
+          "source_paragraph": 139
+        },
+        {
+          "name": "Оджахури из свинины",
+          "portion": "350 г",
+          "price_text": "Цена: 585 ₽",
+          "price": {
+            "value": 585,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Оджахури из свинины.png"
+          ],
+          "source_paragraph": 143
+        },
+        {
+          "name": "Оджахури из телятины",
+          "portion": "350 г",
+          "price_text": "Цена: 645 ₽",
+          "price": {
+            "value": 645,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Оджахури из телятины.png"
+          ],
+          "source_paragraph": 147
+        },
+        {
+          "name": "Цыпленок тапака с мятым картофелем",
+          "portion": "450 г",
+          "price_text": "Цена: 915 ₽",
+          "price": {
+            "value": 915,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Цыпленок тапака с толченным картофелем.png"
+          ],
+          "source_paragraph": 151
+        },
+        {
+          "name": "Чкмерули",
+          "portion": "300 г",
+          "price_text": "Цена: 595 ₽",
+          "price": {
+            "value": 595,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Чкмерули.png"
+          ],
+          "source_paragraph": 155
+        },
+        {
+          "name": "Стейк из мраморной говядины с картофелем по-деревенски",
+          "portion": "350 г",
+          "price_text": "Цена: 985 ₽",
+          "price": {
+            "value": 985,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Стейк из мраморной говядины с картофелем по-деревенски.png"
+          ],
+          "source_paragraph": 159
+        },
+        {
+          "name": "Филе судака на овощной подушке",
+          "portion": "300 г",
+          "price_text": "Цена: 795 ₽",
+          "price": {
+            "value": 795,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Филе судака на овощной подушке.jpg"
+          ],
+          "source_paragraph": 163
+        },
+        {
+          "name": "Терпуг Камчатский запечённый",
+          "portion": "400 г",
+          "price_text": "Цена: 795 ₽",
+          "price": {
+            "value": 795,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Терпуг Камчатский запечённый.png"
+          ],
+          "source_paragraph": 168
+        },
+        {
+          "name": "Треска во фритюре с кисло-сладким соусом и картошкой фри",
+          "portion": "250 г",
+          "price_text": "Цена: 690 ₽",
+          "price": {
+            "value": 690,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Треска во фритюре с кисло-сладким соусом и картошкой фри.png"
+          ],
+          "source_paragraph": 172
+        }
+      ]
+    },
+    {
+      "title": "ДЕСЕРТЫ",
+      "items": [
+        {
+          "name": "Грузинский Шоти",
+          "portion": "1 шт",
+          "price_text": "Цена: 70 ₽",
+          "price": {
+            "value": 70,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Грузинский шоти.png"
+          ],
+          "source_paragraph": 182
+        },
+        {
+          "name": "Хачапури по - Аджарски",
+          "portion": "320 г",
+          "price_text": "Цена: 385 ₽",
+          "price": {
+            "value": 385,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Хачапури по - Аджарски.png"
+          ],
+          "source_paragraph": 186
+        },
+        {
+          "name": "Хачапури по - Мегрельски",
+          "portion": "270 г",
+          "price_text": "Цена: 415 ₽",
+          "price": {
+            "value": 415,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Хачапури по - Мегрельски.png"
+          ],
+          "source_paragraph": 190
+        },
+        {
+          "name": "Хачапури по - Мегрельски на компанию",
+          "portion": "500 г",
+          "price_text": "Цена: 695 ₽",
+          "price": {
+            "value": 695,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Хачапури по - Мегрельски.png"
+          ],
+          "source_paragraph": 194
+        },
+        {
+          "name": "Кубдари",
+          "portion": "250 г",
+          "price_text": "Цена: 355 ₽",
+          "price": {
+            "value": 355,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Кубдари.png"
+          ],
+          "source_paragraph": 198
+        },
+        {
+          "name": "Кубдари на компанию",
+          "portion": "500 г",
+          "price_text": "Цена: 625 ₽",
+          "price": {
+            "value": 625,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Кубдари на компанию.png"
+          ],
+          "source_paragraph": 202
+        },
+        {
+          "name": "Хачапури по-Турецки",
+          "portion": "330 г",
+          "price_text": "Цена: 425 ₽",
+          "price": {
+            "value": 425,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Хачапури по-Турецки.png"
+          ],
+          "source_paragraph": 206
+        },
+        {
+          "name": "Гюзлама с курицей и сыром на одного",
+          "portion": "250 г",
+          "price_text": "Цена: 350 ₽",
+          "price": {
+            "value": 350,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Гюзлама с курицей и сыром на одного.png"
+          ],
+          "source_paragraph": 210
+        },
+        {
+          "name": "Гюзлама с курицей и сыром на компанию",
+          "portion": "500 г",
+          "price_text": "Цена: 685 ₽",
+          "price": {
+            "value": 685,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Гюзлама с курицей и сыром на компанию.png"
+          ],
+          "source_paragraph": 215
+        },
+        {
+          "name": "Чебурек",
+          "portion": "180 г",
+          "price_text": "Цена: 275 ₽",
+          "price": {
+            "value": 275,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Чебурек.png"
+          ],
+          "source_paragraph": 219
+        },
+        {
+          "name": "Кутабы",
+          "portion": "130 г",
+          "price_text": "Цена: 255 ₽",
+          "price": {
+            "value": 255,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Кутабы.png"
+          ],
+          "source_paragraph": 223
+        }
+      ]
+    },
+    {
+      "title": "Соусы",
+      "items": [
+        {
+          "name": "Ткемали",
+          "portion": "50 г",
+          "price_text": "Цена: 80 ₽",
+          "price": {
+            "value": 80,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Ткемали.jpg"
+          ],
+          "source_paragraph": 229
+        },
+        {
+          "name": "Аджика",
+          "portion": "50 г",
+          "price_text": "Цена: 80 ₽",
+          "price": {
+            "value": 80,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Аджика.jpg"
+          ],
+          "source_paragraph": 234
+        },
+        {
+          "name": "Томатный",
+          "portion": "50 г",
+          "price_text": "Цена: 80 ₽",
+          "price": {
+            "value": 80,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Томатный соус.jpg"
+          ],
+          "source_paragraph": 238
+        },
+        {
+          "name": "Сметана",
+          "portion": "50 г",
+          "price_text": "Цена: 80 ₽",
+          "price": {
+            "value": 80,
+            "currency": "₽"
+          },
+          "photos": [
+            "/menu/Сметана.png"
+          ],
+          "source_paragraph": 243
+        }
+      ]
+    }
+  ]
+}
