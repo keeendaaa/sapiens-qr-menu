@@ -193,10 +193,10 @@ export function AIWaiter({ menuItems, onItemClick }: AIWaiterProps) {
         className="mb-4"
       >
         <div className="flex items-center gap-2.5 mb-1.5">
-          <div className="bg-gradient-to-r from-[#C41E3A] to-[#8B1538] p-2.5 rounded-xl">
+          <div className="bg-gradient-to-r from-[#2a2a2a] to-[#1a1a1a] p-2.5 rounded-xl">
             <Bot className="w-5 h-5 text-white" />
           </div>
-          <h2 className="text-[#C41E3A]">AI Официант</h2>
+          <h2 className="text-[#2a2a2a]">AI Официант</h2>
         </div>
         <p className="text-gray-600 text-sm">
           Задавайте любые вопросы о меню и получайте персональные рекомендации
@@ -221,7 +221,7 @@ export function AIWaiter({ menuItems, onItemClick }: AIWaiterProps) {
               <div
                 className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
                   message.sender === 'ai'
-                    ? 'bg-gradient-to-r from-[#C41E3A] to-[#8B1538]'
+                    ? 'bg-gradient-to-r from-[#2a2a2a] to-[#1a1a1a]'
                     : 'bg-gray-200'
                 }`}
               >
@@ -238,7 +238,7 @@ export function AIWaiter({ menuItems, onItemClick }: AIWaiterProps) {
                   className={`px-3 py-2.5 rounded-2xl ${
                     message.sender === 'ai'
                       ? 'bg-white shadow-md'
-                      : 'bg-gradient-to-r from-[#C41E3A] to-[#8B1538] text-white'
+                      : 'bg-gradient-to-r from-[#2a2a2a] to-[#1a1a1a] text-white'
                   }`}
                 >
                   <p className={`text-sm ${message.sender === 'ai' ? 'text-gray-700' : ''}`}>
@@ -254,12 +254,12 @@ export function AIWaiter({ menuItems, onItemClick }: AIWaiterProps) {
                         key={item.id}
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="bg-white rounded-lg overflow-hidden shadow-sm border border-[#C41E3A]/10 cursor-pointer active:shadow-md transition-shadow"
+                        className="bg-white rounded-lg overflow-hidden shadow-sm border border-[#2a2a2a]/10 cursor-pointer active:shadow-md transition-shadow"
                         onClick={() => onItemClick(item)}
                         whileTap={{ scale: 0.97 }}
                       >
                         <div className="flex gap-3 p-2">
-                          <div className="relative w-16 h-16 overflow-hidden bg-gradient-to-br from-[#C41E3A]/5 to-[#FFF8F0] rounded-lg flex-shrink-0">
+                          <div className="relative w-16 h-16 overflow-hidden bg-gradient-to-br from-[#2a2a2a]/5 to-[#FFF8F0] rounded-lg flex-shrink-0">
                             {getImageUrl(item.name) ? (
                               <ImageWithFallback
                                 src={getImageUrl(item.name)}
@@ -268,17 +268,17 @@ export function AIWaiter({ menuItems, onItemClick }: AIWaiterProps) {
                               />
                             ) : (
                               <div className="w-full h-full flex items-center justify-center">
-                                <div className="w-6 h-6 rounded-full bg-[#C41E3A]/10 flex items-center justify-center">
-                                  <Bot className="w-3 h-3 text-[#C41E3A]/30" />
+                                <div className="w-6 h-6 rounded-full bg-[#2a2a2a]/10 flex items-center justify-center">
+                                  <Bot className="w-3 h-3 text-[#2a2a2a]/30" />
                                 </div>
                               </div>
                             )}
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h4 className="text-[#C41E3A] text-sm font-medium line-clamp-1 mb-1">
+                            <h4 className="text-[#2a2a2a] text-sm font-medium line-clamp-1 mb-1">
                               {item.name}
                             </h4>
-                            <p className="text-[#C41E3A] text-xs font-semibold">
+                            <p className="text-[#2a2a2a] text-xs font-semibold">
                               {item.price} ₽
                             </p>
                           </div>
@@ -301,14 +301,14 @@ export function AIWaiter({ menuItems, onItemClick }: AIWaiterProps) {
               exit={{ opacity: 0 }}
               className="flex gap-2"
             >
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#C41E3A] to-[#8B1538] flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#2a2a2a] to-[#1a1a1a] flex items-center justify-center shrink-0">
                 <Bot className="w-4 h-4 text-white" />
               </div>
               <div className="bg-white shadow-md rounded-2xl px-3 py-2.5">
                 <div className="flex gap-1">
-                  <span className="w-2 h-2 bg-[#C41E3A] rounded-full animate-bounce"></span>
-                  <span className="w-2 h-2 bg-[#C41E3A] rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></span>
-                  <span className="w-2 h-2 bg-[#C41E3A] rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></span>
+                  <span className="w-2 h-2 bg-[#2a2a2a] rounded-full animate-bounce"></span>
+                  <span className="w-2 h-2 bg-[#2a2a2a] rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></span>
+                  <span className="w-2 h-2 bg-[#2a2a2a] rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></span>
                 </div>
               </div>
             </motion.div>
@@ -326,7 +326,7 @@ export function AIWaiter({ menuItems, onItemClick }: AIWaiterProps) {
               key={action}
               onClick={() => setInputText(action)}
               whileTap={{ scale: 0.95 }}
-              className="px-3 py-1.5 bg-white border-2 border-[#C41E3A]/20 text-[#C41E3A] rounded-full active:bg-[#C41E3A]/5 transition-colors whitespace-nowrap text-xs"
+              className="px-3 py-1.5 bg-white border-2 border-[#2a2a2a]/20 text-[#2a2a2a] rounded-full active:bg-[#2a2a2a]/5 transition-colors whitespace-nowrap text-xs"
             >
               {action}
             </motion.button>
@@ -342,12 +342,12 @@ export function AIWaiter({ menuItems, onItemClick }: AIWaiterProps) {
           onChange={(e) => setInputText(e.target.value)}
           onKeyPress={(e) => e.key === 'Enter' && handleSend()}
           placeholder="Напишите ваш вопрос..."
-          className="flex-1 px-3 py-2.5 bg-white border-2 border-[#C41E3A]/20 rounded-xl focus:outline-none focus:border-[#C41E3A] transition-colors text-sm"
+          className="flex-1 px-3 py-2.5 bg-white border-2 border-[#2a2a2a]/20 rounded-xl focus:outline-none focus:border-[#2a2a2a] transition-colors text-sm"
         />
         <motion.button
           whileTap={{ scale: 0.95 }}
           onClick={handleSend}
-          className="bg-gradient-to-r from-[#C41E3A] to-[#8B1538] text-white p-2.5 rounded-xl shadow-lg"
+          className="bg-gradient-to-r from-[#2a2a2a] to-[#1a1a1a] text-white p-2.5 rounded-xl shadow-lg"
         >
           <Send className="w-5 h-5" />
         </motion.button>

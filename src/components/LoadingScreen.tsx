@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
-import logo from '../assets/logo.png';
+import loadLogo from '../assets/load-logo.svg';
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -37,7 +37,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[#FFF8F0]"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[#eeecdd]"
     >
       <div className="flex flex-col items-center gap-6">
         {/* Logo */}
@@ -53,16 +53,16 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
           className="relative"
         >
           <img 
-            src={logo} 
-            alt="Ван Гоги" 
+            src={loadLogo} 
+            alt="Sapiens" 
             className="w-24 h-auto max-w-[100px]"
           />
         </motion.div>
 
         {/* Progress Bar */}
-        <div className="w-64 h-1 bg-[#C41E3A]/10 rounded-full overflow-hidden">
+        <div className="w-64 h-1 bg-[#2a2a2a]/10 rounded-full overflow-hidden">
           <motion.div
-            className="h-full bg-[#C41E3A] rounded-full"
+            className="h-full bg-[#2a2a2a] rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.3, ease: "easeOut" }}
@@ -74,7 +74,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-[#C41E3A]/60 text-sm font-medium"
+          className="text-[#2a2a2a]/60 text-sm font-medium"
         >
           Загрузка меню...
         </motion.p>

@@ -1,7 +1,7 @@
 // Image map для всех блюд меню
 // Локальные изображения из menu.json
 
-const baseUrl = import.meta.env.BASE_URL || '/vangogi/';
+const baseUrl = import.meta.env.BASE_URL || '/sapiens/';
 
 const imageMapData: Record<string, string> = {
   'Аджика': `${baseUrl}menu/Аджика.jpg`,

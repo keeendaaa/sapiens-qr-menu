@@ -54,7 +54,7 @@
       target: 'esnext',
       outDir: 'build',
     },
-    base: '/vangogi/',
+    base: '/sapiens/',
     server: {
       port: 3000,
       open: true,
