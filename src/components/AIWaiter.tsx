@@ -178,9 +178,9 @@ export function AIWaiter({ menuItems, onItemClick }: AIWaiterProps) {
 
   const quickActions = [
     'Рекомендуйте блюдо',
-    'Покажите хинкали',
+    'Что выбрать на вечер?',
     'Вегетарианские блюда',
-    'Грузинская кухня',
+    'Подбери под мое настроение',
   ];
 
   return (
