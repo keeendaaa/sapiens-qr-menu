@@ -7,12 +7,13 @@ export function MenuHeader() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="relative overflow-hidden bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] text-white py-8 px-4"
+      className="relative overflow-hidden text-[#eeecdd] py-8 px-4"
+      style={{ backgroundColor: '#212529' }}
     >
       {/* Decorative background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-64 h-64 bg-[#eeecdd] rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#eeecdd] rounded-full blur-3xl"></div>
+      <div className="absolute inset-0" style={{ zIndex: 0 }}>
+        <div className="absolute top-10 left-10 w-64 h-64 bg-black/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-black/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -31,7 +32,7 @@ export function MenuHeader() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="text-center"
         >
-          <p className="text-sm text-[#eeecdd] opacity-90 max-w-2xl mx-auto">
+          <p className="text-sm max-w-2xl mx-auto" style={{ color: '#eeecdd' }}>
             Погрузитесь в мир изысканных вкусов и художественной подачи
           </p>
         </motion.div>

@@ -63,7 +63,7 @@ export default function App() {
       </AnimatePresence>
       
       {!isLoading && (
-        <div className="min-h-screen bg-[#FFF8F0] pb-16">
+        <div className="min-h-screen bg-[#eeecdd] pb-16">
       <MenuHeader />
       
       {activeTab === 'menu' && (

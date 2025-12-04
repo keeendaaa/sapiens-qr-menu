@@ -28,7 +28,7 @@ const iconMap = {
 
 export function CategoryTabs({ selectedCategory, onSelectCategory }: CategoryTabsProps) {
   return (
-    <div className="sticky top-0 z-40 bg-[#FFF8F0] border-b border-[#2a2a2a]/10 shadow-sm">
+    <div className="sticky top-0 z-40 bg-[#eeecdd] border-b border-[#212529]/10 shadow-sm">
       <div className="overflow-x-auto scrollbar-hide">
         <div className="flex gap-2 px-3 py-2.5 min-w-max">
           {categories.map((category) => {
@@ -41,8 +41,8 @@ export function CategoryTabs({ selectedCategory, onSelectCategory }: CategoryTab
                 onClick={() => onSelectCategory(category.id)}
                 className={`relative flex items-center gap-1.5 px-3 py-1.5 rounded-full whitespace-nowrap transition-all text-xs ${
                   isSelected 
-                    ? 'bg-[#2a2a2a] text-white shadow-md shadow-[#2a2a2a]/30' 
-                    : 'bg-white text-[#2a2a2a] active:bg-[#2a2a2a]/5 border border-[#2a2a2a]/20'
+                    ? 'bg-[#212529] text-[#eeecdd] shadow-md shadow-[#212529]/30' 
+                    : 'bg-[#eeecdd] text-[#212529] active:bg-[#212529]/5 border border-[#212529]/20'
                 }`}
                 whileTap={{ scale: 0.95 }}
               >
@@ -52,7 +52,7 @@ export function CategoryTabs({ selectedCategory, onSelectCategory }: CategoryTab
                 {isSelected && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-[#2a2a2a] rounded-full -z-10"
+                    className="absolute inset-0 bg-[#212529] rounded-full -z-10"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}

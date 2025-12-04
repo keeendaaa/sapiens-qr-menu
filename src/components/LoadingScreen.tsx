@@ -60,9 +60,9 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
         </motion.div>
 
         {/* Progress Bar */}
-        <div className="w-64 h-1 bg-[#2a2a2a]/10 rounded-full overflow-hidden">
+        <div className="w-64 h-1 bg-[#212529]/10 rounded-full overflow-hidden">
           <motion.div
-            className="h-full bg-[#2a2a2a] rounded-full"
+            className="h-full bg-[#212529] rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.3, ease: "easeOut" }}
@@ -74,7 +74,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-[#2a2a2a]/60 text-sm font-medium"
+          className="text-[#212529]/60 text-sm font-medium"
         >
           Загрузка меню...
         </motion.p>

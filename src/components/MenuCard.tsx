@@ -14,7 +14,7 @@ export function MenuCard({ item, imageUrl, onClick }: MenuCardProps) {
 
   return (
     <motion.div
-      className="bg-white rounded-xl overflow-hidden shadow-md active:shadow-xl transition-shadow duration-300 group cursor-pointer"
+      className="bg-[#eeecdd] rounded-xl overflow-hidden shadow-md active:shadow-xl transition-shadow duration-300 group cursor-pointer"
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       whileTap={{ scale: 0.98 }}
@@ -22,7 +22,7 @@ export function MenuCard({ item, imageUrl, onClick }: MenuCardProps) {
       onClick={onClick}
     >
       {/* Image Container */}
-      <div className="relative h-64 overflow-hidden bg-gradient-to-br from-[#2a2a2a]/5 to-[#FFF8F0]">
+      <div className="relative h-64 overflow-hidden bg-gradient-to-br from-[#212529]/5 to-[#eeecdd]">
         {imageUrl ? (
           <motion.div
             animate={{ scale: isHovered ? 1.1 : 1 }}
@@ -37,12 +37,12 @@ export function MenuCard({ item, imageUrl, onClick }: MenuCardProps) {
         ) : (
           <div className="w-full h-full flex items-center justify-center">
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-2 rounded-full bg-[#2a2a2a]/10 flex items-center justify-center">
-                <svg className="w-8 h-8 text-[#2a2a2a]/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-16 h-16 mx-auto mb-2 rounded-full bg-[#212529]/10 flex items-center justify-center">
+                <svg className="w-8 h-8 text-[#212529]/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                 </svg>
               </div>
-              <p className="text-[#2a2a2a]/40 text-xs">Фото</p>
+              <p className="text-[#212529]/40 text-xs">Фото</p>
             </div>
           </div>
         )}
@@ -52,7 +52,7 @@ export function MenuCard({ item, imageUrl, onClick }: MenuCardProps) {
 
         {/* Price badge */}
         <motion.div
-          className="absolute top-3 right-3 bg-[#2a2a2a] text-white px-3 py-1.5 rounded-full shadow-lg text-sm"
+          className="absolute top-3 right-3 bg-[#212529] text-[#eeecdd] px-3 py-1.5 rounded-full shadow-lg text-sm"
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ 
@@ -68,10 +68,10 @@ export function MenuCard({ item, imageUrl, onClick }: MenuCardProps) {
 
       {/* Content */}
       <div className="p-4">
-        <h3 className="text-[#2a2a2a] mb-1.5">{item.name}</h3>
+        <h3 className="text-[#212529] mb-1.5">{item.name}</h3>
         
         {item.description && (
-          <p className="text-gray-600 text-sm line-clamp-2">
+          <p className="text-[#212529]/70 text-sm line-clamp-2">
             {item.description}
           </p>
         )}
@@ -79,7 +79,7 @@ export function MenuCard({ item, imageUrl, onClick }: MenuCardProps) {
 
       {/* Decorative corner accent */}
       <div className="absolute bottom-0 right-0 w-20 h-20 opacity-5 pointer-events-none">
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[#2a2a2a] rounded-tl-full" />
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[#212529] rounded-tl-full" />
       </div>
     </motion.div>
   );

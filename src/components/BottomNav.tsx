@@ -14,7 +14,7 @@ export function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-[#2a2a2a]/10 shadow-2xl z-50 safe-area-inset-bottom">
+    <div className="fixed bottom-0 left-0 right-0 border-t-2 border-[#212529]/10 shadow-2xl z-50 safe-area-inset-bottom" style={{ backgroundColor: '#eeecdd' }}>
       <div className="max-w-6xl mx-auto px-2">
         <div className="flex justify-around items-center h-16">
           {tabs.map((tab) => {
@@ -34,7 +34,7 @@ export function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
                   }}
                   transition={{ duration: 0.2 }}
                   className={`relative ${
-                    isActive ? 'text-[#2a2a2a]' : 'text-gray-400'
+                    isActive ? 'text-[#212529]' : 'text-[#212529]/50'
                   }`}
                 >
                   <Icon className="w-5 h-5" />
@@ -42,7 +42,7 @@ export function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
                   {isActive && (
                     <motion.div
                       layoutId="activeIndicator"
-                      className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 bg-[#2a2a2a] rounded-full"
+                      className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 bg-[#212529] rounded-full"
                       transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />
                   )}
@@ -50,7 +50,7 @@ export function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
 
                 <span
                   className={`text-[10px] transition-colors leading-tight text-center ${
-                    isActive ? 'text-[#2a2a2a]' : 'text-gray-400'
+                    isActive ? 'text-[#212529]' : 'text-[#212529]/50'
                   }`}
                 >
                   {tab.label}
@@ -59,7 +59,7 @@ export function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
                 {isActive && (
                   <motion.div
                     layoutId="activeBar"
-                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-[#2a2a2a] rounded-full"
+                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-[#212529] rounded-full"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}

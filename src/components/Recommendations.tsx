@@ -32,10 +32,10 @@ const reasons = [
 const badges = ['popular', 'chef', 'favorite', 'new'] as const;
 
 const badgeConfig = {
-  popular: { icon: TrendingUp, label: 'Популярное', color: 'bg-[#2a2a2a]' },
-  chef: { icon: Star, label: 'От шефа', color: 'bg-[#2a2a2a]' },
-  favorite: { icon: Heart, label: 'Любимое', color: 'bg-[#2a2a2a]' },
-  new: { icon: Star, label: 'Новинка', color: 'bg-[#2a2a2a]' },
+  popular: { icon: TrendingUp, label: 'Популярное', color: 'bg-[#212529]' },
+  chef: { icon: Star, label: 'От шефа', color: 'bg-[#212529]' },
+  favorite: { icon: Heart, label: 'Любимое', color: 'bg-[#212529]' },
+  new: { icon: Star, label: 'Новинка', color: 'bg-[#212529]' },
 };
 
 export function Recommendations({ menuItems, onItemClick }: RecommendationsProps) {
@@ -63,8 +63,8 @@ export function Recommendations({ menuItems, onItemClick }: RecommendationsProps
         transition={{ duration: 0.5 }}
       >
         <div className="mb-5">
-          <h2 className="text-[#2a2a2a] mb-1">Рекомендации для вас</h2>
-          <p className="text-gray-600 text-sm">
+          <h2 className="text-[#212529] mb-1">Рекомендации для вас</h2>
+          <p className="text-[#212529]/70 text-sm">
             Специально подобранные блюда от нашего шеф-повара
           </p>
         </div>
@@ -81,11 +81,11 @@ export function Recommendations({ menuItems, onItemClick }: RecommendationsProps
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.4 }}
                 onClick={() => onItemClick(item)}
-                className="bg-white rounded-xl overflow-hidden shadow-md active:shadow-xl transition-all cursor-pointer"
+                className="bg-[#eeecdd] rounded-xl overflow-hidden shadow-md active:shadow-xl transition-all cursor-pointer"
               >
                 <div className="flex gap-3 p-3">
                   {/* Image */}
-                  <div className="relative w-24 h-24 shrink-0 rounded-lg overflow-hidden bg-gradient-to-br from-[#2a2a2a]/5 to-[#FFF8F0]">
+                  <div className="relative w-24 h-24 shrink-0 rounded-lg overflow-hidden bg-gradient-to-br from-[#212529]/5 to-[#eeecdd]">
                     {getImageUrl(item.name) ? (
                       <ImageWithFallback
                         src={getImageUrl(item.name)}
@@ -94,8 +94,8 @@ export function Recommendations({ menuItems, onItemClick }: RecommendationsProps
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
-                        <div className="w-12 h-12 rounded-full bg-[#2a2a2a]/10 flex items-center justify-center">
-                          <svg className="w-6 h-6 text-[#2a2a2a]/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div className="w-12 h-12 rounded-full bg-[#212529]/10 flex items-center justify-center">
+                          <svg className="w-6 h-6 text-[#212529]/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                           </svg>
                         </div>
@@ -103,7 +103,7 @@ export function Recommendations({ menuItems, onItemClick }: RecommendationsProps
                     )}
                     
                     {/* Badge */}
-                    <div className={`absolute top-1.5 left-1.5 ${badge.color} text-white px-1.5 py-0.5 rounded-full flex items-center gap-1 text-[10px]`}>
+                    <div className={`absolute top-1.5 left-1.5 ${badge.color} text-[#eeecdd] px-1.5 py-0.5 rounded-full flex items-center gap-1 text-[10px]`}>
                       <BadgeIcon className="w-2.5 h-2.5" />
                       <span>{badge.label}</span>
                     </div>
@@ -112,20 +112,20 @@ export function Recommendations({ menuItems, onItemClick }: RecommendationsProps
                   {/* Content */}
                   <div className="flex-1 flex flex-col justify-between min-w-0">
                     <div>
-                      <h3 className="text-[#2a2a2a] mb-0.5 text-base">{item.name}</h3>
-                      <p className="text-gray-600 text-xs line-clamp-2 mb-1">
+                      <h3 className="text-[#212529] mb-0.5 text-base">{item.name}</h3>
+                      <p className="text-[#212529]/70 text-xs line-clamp-2 mb-1">
                         {item.description}
                       </p>
-                      <p className="text-[#2a2a2a]/70 text-xs italic">
+                      <p className="text-[#212529]/70 text-xs italic">
                         {item.reason}
                       </p>
                     </div>
                     
                     <div className="flex items-center justify-between mt-2">
-                      <span className="text-[#2a2a2a] text-sm">{item.price} ₽</span>
+                      <span className="text-[#212529] text-sm">{item.price} ₽</span>
                       <motion.button
                         whileTap={{ scale: 0.95 }}
-                        className="bg-[#2a2a2a] text-white px-3 py-1.5 rounded-lg text-xs"
+                        className="bg-[#212529] text-[#eeecdd] px-3 py-1.5 rounded-lg text-xs"
                         onClick={(e) => {
                           e.stopPropagation();
                           onItemClick(item);

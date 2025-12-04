@@ -35,7 +35,7 @@ export function MenuGrid({ items, onItemClick }: MenuGridProps) {
 
       {items.length === 0 && (
         <div className="text-center py-20">
-          <p className="text-[#2a2a2a]/60 text-lg">Блюда не найдены</p>
+          <p className="text-[#212529]/60 text-lg">Блюда не найдены</p>
         </div>
       )}
     </div>

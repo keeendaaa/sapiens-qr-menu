@@ -2,9 +2,9 @@
 
 :root {
   --font-size: 16px;
-  --background: #ffffff;
+  --background: #eeecdd;
   --foreground: oklch(0.145 0 0);
-  --card: #ffffff;
+  --card: #eeecdd;
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
@@ -125,7 +125,9 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    background-color: #eeecdd;
+    @apply text-foreground;
+    font-family: "Arsenal", ui-sans-serif, system-ui, sans-serif;
   }
 }
 
@@ -186,6 +188,7 @@
 
 html {
   font-size: var(--font-size);
+  font-family: "Arsenal", ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Hide scrollbar for category tabs */
