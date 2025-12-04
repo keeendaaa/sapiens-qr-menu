@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { AnimatePresence } from 'motion/react';
 import { MenuHeader } from './components/MenuHeader';
 import { CategoryTabs } from './components/CategoryTabs';
@@ -10,34 +10,28 @@ import { AIWaiter } from './components/AIWaiter';
 import { MenuDetailModal } from './components/MenuDetailModal';
 import { LoadingScreen } from './components/LoadingScreen';
 import menuData from '../menu.json';
-import dishCategoryMapping from '../dish_to_category.json';
 
-// Функция для преобразования данных из menu.json в MenuItem[]
-function loadMenuItemsFromJson(): MenuItem[] {
-  const items: MenuItem[] = [];
-  let id = 1;
+// Преобразуем данные из menu.json в формат MenuItem[]
+const menuItems: MenuItem[] = menuData.all_items || [];
 
-  // Загружаем блюда в порядке из menu.json с правильными категориями
-  for (const section of menuData.sections) {
-    for (const item of section.items) {
-      // Используем маппинг из dish_to_category.json, если есть
-      const category = (dishCategoryMapping as Record<string, string>)[item.name] || 'appetizers';
-      
-      items.push({
-        id: id++,
-        name: item.name,
-        description: item.portion || '',
-        price: item.price.value,
-        category: category as MenuItem['category'],
-        image: 'default'
-      });
-    }
-  }
+// Получаем список категорий из данных меню
+const categories = menuData.menu?.categories?.map(cat => ({
+  id: cat.name.toLowerCase().replace(/\s+/g, '-'),
+  name: cat.name,
+  icon: getCategoryIcon(cat.name)
+})) || [];
 
-  return items;
+function getCategoryIcon(categoryName: string): string {
+  const lowerName = categoryName.toLowerCase();
+  if (lowerName.includes('десерт')) return 'cake';
+  if (lowerName.includes('рыба') || lowerName.includes('морепродукт') || lowerName.includes('суши') || lowerName.includes('ролл')) return 'fish';
+  if (lowerName.includes('мясн')) return 'chef';
+  if (lowerName.includes('салат')) return 'utensils';
+  if (lowerName.includes('суп')) return 'utensils';
+  if (lowerName.includes('завтрак')) return 'coffee';
+  if (lowerName.includes('закуск')) return 'utensils';
+  return 'utensils';
 }
-
-const menuItems: MenuItem[] = loadMenuItemsFromJson();
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -45,14 +39,14 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<'recommendations' | 'menu' | 'ai'>('menu');
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
 
-  // Фильтруем блюда по категории, сохраняя порядок из menu.json
   const filteredItems = useMemo(() => {
-    const items = selectedCategory === 'all' 
-      ? menuItems 
-      : menuItems.filter(item => item.category === selectedCategory);
-    // Сохраняем порядок из menu.json для всех категорий
-    return items;
-  }, [selectedCategory, menuItems]);
+    if (selectedCategory === 'all') {
+      return menuItems;
+    }
+    const categoryName = categories.find(cat => cat.id === selectedCategory)?.name;
+    if (!categoryName) return menuItems;
+    return menuItems.filter(item => item.category === categoryName);
+  }, [selectedCategory]);
 
   return (
     <>
@@ -64,28 +58,28 @@ export default function App() {
       
       {!isLoading && (
         <div className="min-h-screen bg-[#eeecdd] pb-16">
-      <MenuHeader />
-      
-      {activeTab === 'menu' && (
-        <>
-          <CategoryTabs 
-            selectedCategory={selectedCategory}
-            onSelectCategory={setSelectedCategory}
-          />
-          <MenuGrid items={filteredItems} onItemClick={setSelectedItem} />
-        </>
-      )}
+          <MenuHeader />
+          
+          {activeTab === 'menu' && (
+            <>
+              <CategoryTabs 
+                selectedCategory={selectedCategory}
+                onSelectCategory={setSelectedCategory}
+                categories={categories}
+              />
+              <MenuGrid items={filteredItems} onItemClick={setSelectedItem} />
+            </>
+          )}
 
-      {activeTab === 'recommendations' && <Recommendations menuItems={menuItems} onItemClick={setSelectedItem} />}
-      
-      {activeTab === 'ai' && <AIWaiter menuItems={menuItems} onItemClick={setSelectedItem} />}
+          {activeTab === 'recommendations' && <Recommendations menuItems={menuItems} onItemClick={setSelectedItem} />}
+          
+          {activeTab === 'ai' && <AIWaiter menuItems={menuItems} onItemClick={setSelectedItem} />}
 
-      <BottomNav activeTab={activeTab} onTabChange={setActiveTab} />
-      
+          <BottomNav activeTab={activeTab} onTabChange={setActiveTab} />
+          
       <AnimatePresence>
         {selectedItem && (
           <MenuDetailModal 
-            key={selectedItem.id}
             item={selectedItem}
             menuItems={menuItems}
             onClose={() => setSelectedItem(null)}

@@ -2,7 +2,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useState, useRef, useEffect, useMemo } from 'react';
 import { Send, Bot, User } from 'lucide-react';
 import { MenuItem } from './types';
-import { getImageUrl } from './imageMap';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface Message {
@@ -260,9 +259,9 @@ export function AIWaiter({ menuItems, onItemClick }: AIWaiterProps) {
                       >
                         <div className="flex gap-3 p-2">
                           <div className="relative w-16 h-16 overflow-hidden bg-gradient-to-br from-[#212529]/5 to-[#eeecdd] rounded-lg flex-shrink-0">
-                            {getImageUrl(item.name) ? (
+                            {false ? (
                               <ImageWithFallback
-                                src={getImageUrl(item.name)}
+                                src=""
                                 alt={item.name}
                                 className="w-full h-full object-cover"
                               />
@@ -278,9 +277,11 @@ export function AIWaiter({ menuItems, onItemClick }: AIWaiterProps) {
                             <h4 className="text-[#212529] text-sm font-medium line-clamp-1 mb-1">
                               {item.name}
                             </h4>
-                            <div className="px-2 py-1 rounded-full text-xs inline-block" style={{ backgroundColor: '#212529', color: '#eeecdd' }}>
-                              <span style={{ color: '#eeecdd' }}>{item.price} ₽</span>
-                            </div>
+                            {item.price !== undefined && (
+                              <div className="px-2 py-1 rounded-full text-xs inline-block" style={{ backgroundColor: '#212529', color: '#eeecdd' }}>
+                                <span style={{ color: '#eeecdd' }}>{item.price} ₽</span>
+                              </div>
+                            )}
                           </div>
                         </div>
                       </motion.div>

@@ -1,773 +1,1100 @@
 {
-  "title": "МЕНЮ РЕСТОРАНА ВАН ГОГИ",
-  "source_file": "/Users/kenda/menu/МЕНЮ_РЕСТОРАНА_ВАН_ГОГИ_актуальное.docx",
-  "generated_at": "2025-11-30T22:36:09.187297+00:00",
-  "sections": [
+  "menu": {
+    "categories": [
+      {
+        "name": "Десерты",
+        "items": [
+          {
+            "id": 2,
+            "name": "Бородинские эклеры с кремом из печени трески, перепелиным яйцом и щучьей икрой",
+            "category": "Десерты",
+            "image": "images/Бородинские_эклеры_с_кремом_из_печени_трески__перепелиным_яйцом_и_щучьей_икрой.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 10,
+            "name": "Деконструированный медовик с медовыми  сотами и свежими  ягодами",
+            "category": "Десерты",
+            "image": "images/Деконструированный_медовик_с_медовыми_сотами_и_свежими_ягодами.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 49,
+            "name": "Чизкейк Сан Себастьян, малиновый соус, сорбет",
+            "category": "Десерты",
+            "image": "images/Чизкейк_Сан_Себастьян__малиновый_соус__сорбет.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 52,
+            "name": "Яблочный пирог с миндалем,  орехом пекан и кремом из фиников",
+            "category": "Десерты",
+            "image": "images/Яблочный_пирог_с_миндалем__орехом_пекан_и_кремом_из_фиников.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          }
+        ],
+        "count": 4
+      },
+      {
+        "name": "Завтраки",
+        "items": [
+          {
+            "id": 27,
+            "name": "Мозговая кость с мисо,  яблоком и запечённой бриошью",
+            "category": "Завтраки",
+            "image": "images/Мозговая_кость_с_мисо__яблоком_и_запечённой_бриошью.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          }
+        ],
+        "count": 1
+      },
+      {
+        "name": "Закуски",
+        "items": [
+          {
+            "id": 11,
+            "name": "Запеченная треска с томатами, оливками и артишоками",
+            "category": "Закуски",
+            "image": "images/Запеченная_треска_с_томатами__оливками_и_артишоками.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 16,
+            "name": "Карпаччо из кабачков с маринованными артишоками",
+            "category": "Закуски",
+            "image": "images/Карпаччо_из_кабачков_с_маринованными_артишоками.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 17,
+            "name": "Карпаччо из стриплойна с пармезаном и трюфелем",
+            "category": "Закуски",
+            "image": "images/Карпаччо_из_стриплойна_с_пармезаном_и_трюфелем.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 26,
+            "name": "Маринованные оливки, маслины, артишок",
+            "category": "Закуски",
+            "image": "images/Маринованные_оливки__маслины__артишок.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          }
+        ],
+        "count": 4
+      },
+      {
+        "name": "Мясные блюда",
+        "items": [
+          {
+            "id": 3,
+            "name": "Борщ от шефа с говяжьим ребром",
+            "category": "Мясные блюда",
+            "image": "images/Борщ_от_шефа_с_говяжьим_ребром.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 30,
+            "name": "Паштет из утки, маринованное яблоко, угорь, бриошь",
+            "category": "Мясные блюда",
+            "image": "images/Паштет_из_утки__маринованное_яблоко__угорь__бриошь.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 31,
+            "name": "Перепелка со шпинатом и картофельным пюре",
+            "category": "Мясные блюда",
+            "image": "images/Перепелка_со_шпинатом_и_картофельным_пюре.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 32,
+            "name": "Перловая каша с уткой, грибами и черной смородиной",
+            "category": "Мясные блюда",
+            "image": "images/Перловая_каша_с_уткой__грибами_и_черной_смородиной.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 33,
+            "name": "Пожарская котлета с картофельным крокетом и трюфелем",
+            "category": "Мясные блюда",
+            "image": "images/Пожарская_котлета_с_картофельным_крокетом_и_трюфелем.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 50,
+            "name": "Шатобриан",
+            "category": "Мясные блюда",
+            "image": "images/Шатобриан.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          }
+        ],
+        "count": 6
+      },
+      {
+        "name": "Прочее",
+        "items": [
+          {
+            "id": 5,
+            "name": "Буррата с запеченной тыквой и соусом из бальзамического уксуса",
+            "category": "Прочее",
+            "image": "images/Буррата_с_запеченной_тыквой_и_соусом_из_бальзамического_уксуса.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 6,
+            "name": "Вагаси моти",
+            "category": "Прочее",
+            "image": "images/Вагаси_моти.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 7,
+            "name": "Вителло тонато",
+            "category": "Прочее",
+            "image": "images/Вителло_тонато.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 8,
+            "name": "Вишисуаз с бастурмой",
+            "category": "Прочее",
+            "image": "images/Вишисуаз_с_бастурмой.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 12,
+            "name": "Запеченный баклажан с кремом из овечьего сыра и  томатами",
+            "category": "Прочее",
+            "image": "images/Запеченный_баклажан_с_кремом_из_овечьего_сыра_и_томатами.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 13,
+            "name": "Запеченный камамбер с чатни из сезонных фруктов",
+            "category": "Прочее",
+            "image": "images/Запеченный_камамбер_с_чатни_из_сезонных_фруктов.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 18,
+            "name": "Кебаб из мраморной говядины с хумусом,  соусом сацебели и йогуртом",
+            "category": "Прочее",
+            "image": "images/Кебаб_из_мраморной_говядины_с_хумусом__соусом_сацебели_и_йогуртом.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 20,
+            "name": "Крем-брюле с розмарином и мандаринами",
+            "category": "Прочее",
+            "image": "images/Крем_брюле_с_розмарином_и_мандаринами.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 22,
+            "name": "Лимонно-шафрановое ризотто с гребешком",
+            "category": "Прочее",
+            "image": "images/Лимонно_шафрановое_ризотто_с_гребешком.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 29,
+            "name": "Павлова с клубникой и юдзу",
+            "category": "Прочее",
+            "image": "images/Павлова_с_клубникой_и_юдзу.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 34,
+            "name": "Полба с  кебабом из креветок и томатами",
+            "category": "Прочее",
+            "image": "images/Полба_с_кебабом_из_креветок_и_томатами.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 35,
+            "name": "Рёбрышки ягненка",
+            "category": "Прочее",
+            "image": "images/Рёбрышки_ягненка.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 42,
+            "name": "Тарт татен с грушей",
+            "category": "Прочее",
+            "image": "images/Тарт_татен_с_грушей.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 43,
+            "name": "Тартар из говядины с чесночным айоли",
+            "category": "Прочее",
+            "image": "images/Тартар_из_говядины_с_чесночным_айоли.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 48,
+            "name": "Фрикадельки с клюквенным соусом и картофельным пюре",
+            "category": "Прочее",
+            "image": "images/Фрикадельки_с_клюквенным_соусом_и_картофельным_пюре.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 51,
+            "name": "Шаурма Sapiens",
+            "category": "Прочее",
+            "image": "images/Шаурма_Sapiens.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          }
+        ],
+        "count": 16
+      },
+      {
+        "name": "Рыба и морепродукты",
+        "items": [
+          {
+            "id": 9,
+            "name": "Голубец с креветкой и соусом из красной икры",
+            "category": "Рыба и морепродукты",
+            "image": "images/Голубец_с_креветкой_и_соусом_из_красной_икры.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 15,
+            "name": "Казаречче с креветками, брокколи и бобами эдамаме",
+            "category": "Рыба и морепродукты",
+            "image": "images/Казаречче_с_креветками__брокколи_и_бобами_эдамаме.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 19,
+            "name": "Кейк из щуки, тайский соус, шпинат, крем пармезан",
+            "category": "Рыба и морепродукты",
+            "image": "images/Кейк_из_щуки__тайский_соус__шпинат__крем_пармезан.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 21,
+            "name": "Крем-суп из тыквы с креветками",
+            "category": "Рыба и морепродукты",
+            "image": "images/Крем_суп_из_тыквы_с_креветками.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 23,
+            "name": "Лосось, гребешок, манго, авокадо, терияки, тобико",
+            "category": "Рыба и морепродукты",
+            "image": "images/Лосось__гребешок__манго__авокадо__терияки__тобико.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 24,
+            "name": "Лосось, тунец, угорь, нори, темпура",
+            "category": "Рыба и морепродукты",
+            "image": "images/Лосось__тунец__угорь__нори__темпура.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 25,
+            "name": "Маринованные креветки с грейпфрутом",
+            "category": "Рыба и морепродукты",
+            "image": "images/Маринованные_креветки_с_грейпфрутом.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 28,
+            "name": "Обоженный лосось с авокадо, томатный шисо и красной икрой",
+            "category": "Рыба и морепродукты",
+            "image": "images/Обоженный_лосось_с_авокадо__томатный_шисо_и_красной_икрой.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 37,
+            "name": "Ролл Калифорния с крабом",
+            "category": "Рыба и морепродукты",
+            "image": "images/Ролл_Калифорния_с_крабом.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 38,
+            "name": "Ролл краб клубника авокадо",
+            "category": "Рыба и морепродукты",
+            "image": "images/Ролл_краб_клубника_авокадо.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 39,
+            "name": "Ролл Радуга Краб, авокадо, тунец, лосось, креветка, угорь",
+            "category": "Рыба и морепродукты",
+            "image": "images/Ролл_Радуга_Краб__авокадо__тунец__лосось__креветка__угорь.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 40,
+            "name": "Ролл Филадельфия с лососем",
+            "category": "Рыба и морепродукты",
+            "image": "images/Ролл_Филадельфия_с_лососем.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 41,
+            "name": "Руккола с креветками и авокадо",
+            "category": "Рыба и морепродукты",
+            "image": "images/Руккола_с_креветками_и_авокадо.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 44,
+            "name": "Том-ям с креветками и шиитаке",
+            "category": "Рыба и морепродукты",
+            "image": "images/Том_ям_с_креветками_и_шиитаке.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 45,
+            "name": "Тунец лосось гребешок креветка красная икра",
+            "category": "Рыба и морепродукты",
+            "image": "images/Тунец_лосось_гребешок_креветка_красная_икра.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 46,
+            "name": "Угорь манго батат",
+            "category": "Рыба и морепродукты",
+            "image": "images/Угорь_манго_батат.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 47,
+            "name": "Угорь, лосось, соус тофу",
+            "category": "Рыба и морепродукты",
+            "image": "images/Угорь__лосось__соус_тофу.png",
+            "image_format": "png",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          }
+        ],
+        "count": 17
+      },
+      {
+        "name": "Салаты",
+        "items": [
+          {
+            "id": 1,
+            "name": "Stefan salad",
+            "category": "Салаты",
+            "image": "images/Stefan_salad.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 14,
+            "name": "Зеленый салат с  яблоком, кабачком и апельсиновым соусом",
+            "category": "Салаты",
+            "image": "images/Зеленый_салат_с_яблоком__кабачком_и_апельсиновым_соусом.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          }
+        ],
+        "count": 2
+      },
+      {
+        "name": "Супы",
+        "items": [
+          {
+            "id": 4,
+            "name": "Бульон со шпинатом и вонтонами из цыпленка",
+            "category": "Супы",
+            "image": "images/Бульон_со_шпинатом_и_вонтонами_из_цыпленка.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          },
+          {
+            "id": 36,
+            "name": "Равиоли с судаком, кинзой и соусом том-ям",
+            "category": "Супы",
+            "image": "images/Равиоли_с_судаком__кинзой_и_соусом_том_ям.jpg",
+            "image_format": "jpg",
+            "description": null,
+            "composition": null,
+            "allergens": null
+          }
+        ],
+        "count": 2
+      }
+    ]
+  },
+  "all_items": [
     {
-      "title": "ЗАКУСКИ",
-      "items": [
-        {
-          "name": "Бакинские томаты с имеретинским сыром и соусом песто",
-          "portion": "210 г",
-          "price_text": "Цена:325 ₽",
-          "price": {
-            "value": 325,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Бакинские томаты с имеретинским сыром и соусом песто.png"
-          ],
-          "source_paragraph": 2
-        },
-        {
-          "name": "Сельдь с теплым картофелем и луком",
-          "portion": "250 г",
-          "price_text": "Цена: 295 ₽",
-          "price": {
-            "value": 295,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Сельдь с теплым картофелем и луком.png"
-          ],
-          "source_paragraph": 6
-        },
-        {
-          "name": "Ассорти из грузинского домашнего сыра",
-          "portion": "200 г",
-          "price_text": "Цена: 685 ₽",
-          "price": {
-            "value": 685,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Ассорти из грузинского домашнего сыра.png"
-          ],
-          "source_paragraph": 10
-        },
-        {
-          "name": "Грузинские соленья",
-          "portion": "250 г",
-          "price_text": "Цена: 410 ₽",
-          "price": {
-            "value": 410,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Грузинские соленья.png"
-          ],
-          "source_paragraph": 14
-        },
-        {
-          "name": "Ассорти из свежих овощей",
-          "portion": "200 г",
-          "price_text": "Цена: 375 ₽",
-          "price": {
-            "value": 375,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Ассорти из свежих овощей.png"
-          ],
-          "source_paragraph": 18
-        },
-        {
-          "name": "Тарелка к пиву",
-          "portion": "330 г",
-          "price_text": "Цена: 525 ₽",
-          "price": {
-            "value": 525,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Тарелка к пиву.png"
-          ],
-          "source_paragraph": 22
-        },
-        {
-          "name": "Мясное плато",
-          "portion": "300 г",
-          "price_text": "Цена: 855 ₽",
-          "price": {
-            "value": 855,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Мясное плато.jpg"
-          ],
-          "source_paragraph": 26
-        },
-        {
-          "name": "Хрустящие баклажаны с соусом Тай Чили",
-          "portion": "300 г",
-          "price_text": "Цена: 465 ₽",
-          "price": {
-            "value": 465,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Хрустящие баклажаны с соусом Тай Чили.png"
-          ],
-          "source_paragraph": 30
-        },
-        {
-          "name": "Ассорти пхали",
-          "portion": "270 г",
-          "price_text": "Цена: 610 ₽",
-          "price": {
-            "value": 610,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Ассорти пхали.png"
-          ],
-          "source_paragraph": 34
-        },
-        {
-          "name": "Рулетики из баклажанов с начинкой из грецких орехов",
-          "portion": "270 г",
-          "price_text": "Цена: 435 ₽",
-          "price": {
-            "value": 435,
-            "currency": "₽"
-          },
-          "photos": [ 
-            "/menu/Рулетики из баклажанов с начинкой из грецких орехов.png"
-          ],
-          "source_paragraph": 38
-        },
-        {
-          "name": "Рулетики из баклажанов с начинкой из творожного сыра и чеснока",
-          "portion": "270 г",
-          "price_text": "Цена: 435 ₽",
-          "price": {
-            "value": 435,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Рулетики из баклажанов с начинкой из творожного сыра и чеснока.webp"
-          ],
-          "source_paragraph": 42
-        },
-        {
-          "name": "Шампиньоны запечённые с сыром",
-          "portion": "200 г",
-          "price_text": "Цена: 425 ₽",
-          "price": {
-            "value": 425,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Шампиньоны запечённые с сыром.png"
-          ],
-          "source_paragraph": 47
-        },
-        {
-          "name": "Сырные палочки в хрустящей панировке",
-          "portion": "180 г",
-          "price_text": "Цена: 335 ₽",
-          "price": {
-            "value": 335,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Сырные палочки в хрустящей панировке.png"
-          ],
-          "source_paragraph": 51
-        },
-        {
-          "name": "Салат из бакинских томатов и огурцов",
-          "portion": "280 г",
-          "price_text": "Цена: 415 ₽",
-          "price": {
-            "value": 415,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Салат из бакинских томатов и огурцов.png"
-          ],
-          "source_paragraph": 55
-        },
-        {
-          "name": "Цезарь с курицей",
-          "portion": "210 г",
-          "price_text": "Цена: 435 ₽",
-          "price": {
-            "value": 435,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Цезарь с курицей.png"
-          ],
-          "source_paragraph": 59
-        },
-        {
-          "name": "Цезарь с креветками",
-          "portion": "200 г",
-          "price_text": "Цена: 545 ₽",
-          "price": {
-            "value": 545,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Цезарь с креветками.png"
-          ],
-          "source_paragraph": 63
-        },
-        {
-          "name": "Фирменный Салат Ван Гоги",
-          "portion": "230 г",
-          "price_text": "Цена: 585 ₽",
-          "price": {
-            "value": 585,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Фирменный Салат Ван Гоги.png"
-          ],
-          "source_paragraph": 67
-        },
-        {
-          "name": "Теплый салат с языком",
-          "portion": "200 г",
-          "price_text": "Цена: 525 ₽",
-          "price": {
-            "value": 525,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Теплый салат с языком.png"
-          ],
-          "source_paragraph": 71
-        },
-        {
-          "name": "Салат Тбилиси от Шеф-повара",
-          "portion": "200 г",
-          "price_text": "Цена: 495 ₽",
-          "price": {
-            "value": 495,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Салат Тбилиси от Шеф-повара.png"
-          ],
-          "source_paragraph": 75
-        },
-        {
-          "name": "Салат из хрустящих баклажанов с сыром Страчателла",
-          "portion": "220 г",
-          "price_text": "Цена: 665 ₽",
-          "price": {
-            "value": 665,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Салат из хрустящих баклажанов с сыром Страчателла.png"
-          ],
-          "source_paragraph": 79
-        },
-        {
-          "name": "Харчо",
-          "portion": "300 г",
-          "price_text": "Цена: 400 ₽",
-          "price": {
-            "value": 400,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Харчо.png"
-          ],
-          "source_paragraph": 83
-        },
-        {
-          "name": "Кюфта по-Турецки с нутом",
-          "portion": "400 г",
-          "price_text": "Цена: 425 ₽",
-          "price": {
-            "value": 425,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Кюфта по-Турецки с нутом.png"
-          ],
-          "source_paragraph": 87
-        },
-        {
-          "name": "Борщ с салом и чесночком",
-          "portion": "300/200 г",
-          "price_text": "Цена: 395 ₽",
-          "price": {
-            "value": 395,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Борщ с салом и чесночком.png"
-          ],
-          "source_paragraph": 91
-        },
-        {
-          "name": "Суп тыквенный",
-          "portion": "350 г",
-          "price_text": "Цена: 355 ₽",
-          "price": {
-            "value": 355,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Суп тыквенный.png"
-          ],
-          "source_paragraph": 95
-        },
-        {
-          "name": "Куриный суп с домашней лапшой",
-          "portion": "350 г",
-          "price_text": "Цена: 325 ₽",
-          "price": {
-            "value": 325,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Куриный суп с домашней лапшой.png"
-          ],
-          "source_paragraph": 99
-        }
-      ]
+      "id": 1,
+      "name": "Stefan salad",
+      "category": "Салаты",
+      "image": "images/Stefan_salad.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
     },
     {
-      "title": "Хинкали",
-      "items": [
-        {
-          "name": "Хинкали с говядиной и свининой",
-          "portion": "3 шт",
-          "price_text": "Цена: 300 ₽",
-          "price": {
-            "value": 300,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Хинкали с говядиной и свининой.png"
-          ],
-          "source_paragraph": 104
-        },
-        {
-          "name": "Хинкали с телятиной",
-          "portion": "3 шт",
-          "price_text": "Цена: 300 ₽",
-          "price": {
-            "value": 300,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Хинкали с телятиной.png"
-          ],
-          "source_paragraph": 108
-        },
-        {
-          "name": "Хинкали с бараниной",
-          "portion": "3 шт",
-          "price_text": "Цена: 300 ₽",
-          "price": {
-            "value": 300,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Хинкали с бараниной.png"
-          ],
-          "source_paragraph": 112
-        },
-        {
-          "name": "Хинкали с бараниной и брынзой",
-          "portion": "3 шт",
-          "price_text": "Цена: 300 ₽",
-          "price": {
-            "value": 300,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Хинкали с бараниной и брынзой.png"
-          ],
-          "source_paragraph": 116
-        },
-        {
-          "name": "Хинкали с грибами",
-          "portion": "3 шт",
-          "price_text": "Цена: 300 ₽",
-          "price": {
-            "value": 300,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Хинкали с грибами.png"
-          ],
-          "source_paragraph": 120
-        },
-        {
-          "name": "Хинкали с сыром",
-          "portion": "3 шт",
-          "price_text": "Цена: 300 ₽",
-          "price": {
-            "value": 300,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Хинкали с сыром.png"
-          ],
-          "source_paragraph": 124
-        }
-      ]
+      "id": 2,
+      "name": "Бородинские эклеры с кремом из печени трески, перепелиным яйцом и щучьей икрой",
+      "category": "Десерты",
+      "image": "images/Бородинские_эклеры_с_кремом_из_печени_трески__перепелиным_яйцом_и_щучьей_икрой.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
     },
     {
-      "title": "Горячие блюда",
-      "items": [
-        {
-          "name": "Буглама из ягненка",
-          "portion": "350 г",
-          "price_text": "Цена: 795₽",
-          "price": {
-            "value": 795,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Буглама из ягненка.png"
-          ],
-          "source_paragraph": 131
-        },
-        {
-          "name": "Говурма из ягнёнка",
-          "portion": "350 г",
-          "price_text": "Цена: 785 ₽",
-          "price": {
-            "value": 785,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Говурма из ягнёнка.png"
-          ],
-          "source_paragraph": 135
-        },
-        {
-          "name": "Долма",
-          "portion": "250 г",
-          "price_text": "Цена: 675 ₽",
-          "price": {
-            "value": 675,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Долма.png"
-          ],
-          "source_paragraph": 139
-        },
-        {
-          "name": "Оджахури из свинины",
-          "portion": "350 г",
-          "price_text": "Цена: 585 ₽",
-          "price": {
-            "value": 585,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Оджахури из свинины.png"
-          ],
-          "source_paragraph": 143
-        },
-        {
-          "name": "Оджахури из телятины",
-          "portion": "350 г",
-          "price_text": "Цена: 645 ₽",
-          "price": {
-            "value": 645,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Оджахури из телятины.png"
-          ],
-          "source_paragraph": 147
-        },
-        {
-          "name": "Цыпленок тапака с мятым картофелем",
-          "portion": "450 г",
-          "price_text": "Цена: 915 ₽",
-          "price": {
-            "value": 915,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Цыпленок тапака с толченным картофелем.png"
-          ],
-          "source_paragraph": 151
-        },
-        {
-          "name": "Чкмерули",
-          "portion": "300 г",
-          "price_text": "Цена: 595 ₽",
-          "price": {
-            "value": 595,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Чкмерули.png"
-          ],
-          "source_paragraph": 155
-        },
-        {
-          "name": "Стейк из мраморной говядины с картофелем по-деревенски",
-          "portion": "350 г",
-          "price_text": "Цена: 985 ₽",
-          "price": {
-            "value": 985,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Стейк из мраморной говядины с картофелем по-деревенски.png"
-          ],
-          "source_paragraph": 159
-        },
-        {
-          "name": "Филе судака на овощной подушке",
-          "portion": "300 г",
-          "price_text": "Цена: 795 ₽",
-          "price": {
-            "value": 795,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Филе судака на овощной подушке.jpg"
-          ],
-          "source_paragraph": 163
-        },
-        {
-          "name": "Терпуг Камчатский запечённый",
-          "portion": "400 г",
-          "price_text": "Цена: 795 ₽",
-          "price": {
-            "value": 795,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Терпуг Камчатский запечённый.png"
-          ],
-          "source_paragraph": 168
-        },
-        {
-          "name": "Треска во фритюре с кисло-сладким соусом и картошкой фри",
-          "portion": "250 г",
-          "price_text": "Цена: 690 ₽",
-          "price": {
-            "value": 690,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Треска во фритюре с кисло-сладким соусом и картошкой фри.png"
-          ],
-          "source_paragraph": 172
-        }
-      ]
+      "id": 3,
+      "name": "Борщ от шефа с говяжьим ребром",
+      "category": "Мясные блюда",
+      "image": "images/Борщ_от_шефа_с_говяжьим_ребром.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
     },
     {
-      "title": "ДЕСЕРТЫ",
-      "items": [
-        {
-          "name": "Грузинский Шоти",
-          "portion": "1 шт",
-          "price_text": "Цена: 70 ₽",
-          "price": {
-            "value": 70,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Грузинский шоти.png"
-          ],
-          "source_paragraph": 182
-        },
-        {
-          "name": "Хачапури по - Аджарски",
-          "portion": "320 г",
-          "price_text": "Цена: 385 ₽",
-          "price": {
-            "value": 385,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Хачапури по - Аджарски.png"
-          ],
-          "source_paragraph": 186
-        },
-        {
-          "name": "Хачапури по - Мегрельски",
-          "portion": "270 г",
-          "price_text": "Цена: 415 ₽",
-          "price": {
-            "value": 415,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Хачапури по - Мегрельски.png"
-          ],
-          "source_paragraph": 190
-        },
-        {
-          "name": "Хачапури по - Мегрельски на компанию",
-          "portion": "500 г",
-          "price_text": "Цена: 695 ₽",
-          "price": {
-            "value": 695,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Хачапури по - Мегрельски.png"
-          ],
-          "source_paragraph": 194
-        },
-        {
-          "name": "Кубдари",
-          "portion": "250 г",
-          "price_text": "Цена: 355 ₽",
-          "price": {
-            "value": 355,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Кубдари.png"
-          ],
-          "source_paragraph": 198
-        },
-        {
-          "name": "Кубдари на компанию",
-          "portion": "500 г",
-          "price_text": "Цена: 625 ₽",
-          "price": {
-            "value": 625,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Кубдари на компанию.png"
-          ],
-          "source_paragraph": 202
-        },
-        {
-          "name": "Хачапури по-Турецки",
-          "portion": "330 г",
-          "price_text": "Цена: 425 ₽",
-          "price": {
-            "value": 425,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Хачапури по-Турецки.png"
-          ],
-          "source_paragraph": 206
-        },
-        {
-          "name": "Гюзлама с курицей и сыром на одного",
-          "portion": "250 г",
-          "price_text": "Цена: 350 ₽",
-          "price": {
-            "value": 350,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Гюзлама с курицей и сыром на одного.png"
-          ],
-          "source_paragraph": 210
-        },
-        {
-          "name": "Гюзлама с курицей и сыром на компанию",
-          "portion": "500 г",
-          "price_text": "Цена: 685 ₽",
-          "price": {
-            "value": 685,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Гюзлама с курицей и сыром на компанию.png"
-          ],
-          "source_paragraph": 215
-        },
-        {
-          "name": "Чебурек",
-          "portion": "180 г",
-          "price_text": "Цена: 275 ₽",
-          "price": {
-            "value": 275,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Чебурек.png"
-          ],
-          "source_paragraph": 219
-        },
-        {
-          "name": "Кутабы",
-          "portion": "130 г",
-          "price_text": "Цена: 255 ₽",
-          "price": {
-            "value": 255,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Кутабы.png"
-          ],
-          "source_paragraph": 223
-        }
-      ]
+      "id": 4,
+      "name": "Бульон со шпинатом и вонтонами из цыпленка",
+      "category": "Супы",
+      "image": "images/Бульон_со_шпинатом_и_вонтонами_из_цыпленка.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
     },
     {
-      "title": "Соусы",
-      "items": [
-        {
-          "name": "Ткемали",
-          "portion": "50 г",
-          "price_text": "Цена: 80 ₽",
-          "price": {
-            "value": 80,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Ткемали.jpg"
-          ],
-          "source_paragraph": 229
-        },
-        {
-          "name": "Аджика",
-          "portion": "50 г",
-          "price_text": "Цена: 80 ₽",
-          "price": {
-            "value": 80,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Аджика.jpg"
-          ],
-          "source_paragraph": 234
-        },
-        {
-          "name": "Томатный",
-          "portion": "50 г",
-          "price_text": "Цена: 80 ₽",
-          "price": {
-            "value": 80,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Томатный соус.jpg"
-          ],
-          "source_paragraph": 238
-        },
-        {
-          "name": "Сметана",
-          "portion": "50 г",
-          "price_text": "Цена: 80 ₽",
-          "price": {
-            "value": 80,
-            "currency": "₽"
-          },
-          "photos": [
-            "/menu/Сметана.png"
-          ],
-          "source_paragraph": 243
-        }
-      ]
+      "id": 5,
+      "name": "Буррата с запеченной тыквой и соусом из бальзамического уксуса",
+      "category": "Прочее",
+      "image": "images/Буррата_с_запеченной_тыквой_и_соусом_из_бальзамического_уксуса.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 6,
+      "name": "Вагаси моти",
+      "category": "Прочее",
+      "image": "images/Вагаси_моти.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 7,
+      "name": "Вителло тонато",
+      "category": "Прочее",
+      "image": "images/Вителло_тонато.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 8,
+      "name": "Вишисуаз с бастурмой",
+      "category": "Прочее",
+      "image": "images/Вишисуаз_с_бастурмой.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 9,
+      "name": "Голубец с креветкой и соусом из красной икры",
+      "category": "Рыба и морепродукты",
+      "image": "images/Голубец_с_креветкой_и_соусом_из_красной_икры.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 10,
+      "name": "Деконструированный медовик с медовыми  сотами и свежими  ягодами",
+      "category": "Десерты",
+      "image": "images/Деконструированный_медовик_с_медовыми_сотами_и_свежими_ягодами.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 11,
+      "name": "Запеченная треска с томатами, оливками и артишоками",
+      "category": "Закуски",
+      "image": "images/Запеченная_треска_с_томатами__оливками_и_артишоками.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 12,
+      "name": "Запеченный баклажан с кремом из овечьего сыра и  томатами",
+      "category": "Прочее",
+      "image": "images/Запеченный_баклажан_с_кремом_из_овечьего_сыра_и_томатами.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 13,
+      "name": "Запеченный камамбер с чатни из сезонных фруктов",
+      "category": "Прочее",
+      "image": "images/Запеченный_камамбер_с_чатни_из_сезонных_фруктов.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 14,
+      "name": "Зеленый салат с  яблоком, кабачком и апельсиновым соусом",
+      "category": "Салаты",
+      "image": "images/Зеленый_салат_с_яблоком__кабачком_и_апельсиновым_соусом.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 15,
+      "name": "Казаречче с креветками, брокколи и бобами эдамаме",
+      "category": "Рыба и морепродукты",
+      "image": "images/Казаречче_с_креветками__брокколи_и_бобами_эдамаме.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 16,
+      "name": "Карпаччо из кабачков с маринованными артишоками",
+      "category": "Закуски",
+      "image": "images/Карпаччо_из_кабачков_с_маринованными_артишоками.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 17,
+      "name": "Карпаччо из стриплойна с пармезаном и трюфелем",
+      "category": "Закуски",
+      "image": "images/Карпаччо_из_стриплойна_с_пармезаном_и_трюфелем.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 18,
+      "name": "Кебаб из мраморной говядины с хумусом,  соусом сацебели и йогуртом",
+      "category": "Прочее",
+      "image": "images/Кебаб_из_мраморной_говядины_с_хумусом__соусом_сацебели_и_йогуртом.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 19,
+      "name": "Кейк из щуки, тайский соус, шпинат, крем пармезан",
+      "category": "Рыба и морепродукты",
+      "image": "images/Кейк_из_щуки__тайский_соус__шпинат__крем_пармезан.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 20,
+      "name": "Крем-брюле с розмарином и мандаринами",
+      "category": "Прочее",
+      "image": "images/Крем_брюле_с_розмарином_и_мандаринами.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 21,
+      "name": "Крем-суп из тыквы с креветками",
+      "category": "Рыба и морепродукты",
+      "image": "images/Крем_суп_из_тыквы_с_креветками.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 22,
+      "name": "Лимонно-шафрановое ризотто с гребешком",
+      "category": "Прочее",
+      "image": "images/Лимонно_шафрановое_ризотто_с_гребешком.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 23,
+      "name": "Лосось, гребешок, манго, авокадо, терияки, тобико",
+      "category": "Рыба и морепродукты",
+      "image": "images/Лосось__гребешок__манго__авокадо__терияки__тобико.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 24,
+      "name": "Лосось, тунец, угорь, нори, темпура",
+      "category": "Рыба и морепродукты",
+      "image": "images/Лосось__тунец__угорь__нори__темпура.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 25,
+      "name": "Маринованные креветки с грейпфрутом",
+      "category": "Рыба и морепродукты",
+      "image": "images/Маринованные_креветки_с_грейпфрутом.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 26,
+      "name": "Маринованные оливки, маслины, артишок",
+      "category": "Закуски",
+      "image": "images/Маринованные_оливки__маслины__артишок.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 27,
+      "name": "Мозговая кость с мисо,  яблоком и запечённой бриошью",
+      "category": "Завтраки",
+      "image": "images/Мозговая_кость_с_мисо__яблоком_и_запечённой_бриошью.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 28,
+      "name": "Обоженный лосось с авокадо, томатный шисо и красной икрой",
+      "category": "Рыба и морепродукты",
+      "image": "images/Обоженный_лосось_с_авокадо__томатный_шисо_и_красной_икрой.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 29,
+      "name": "Павлова с клубникой и юдзу",
+      "category": "Прочее",
+      "image": "images/Павлова_с_клубникой_и_юдзу.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 30,
+      "name": "Паштет из утки, маринованное яблоко, угорь, бриошь",
+      "category": "Мясные блюда",
+      "image": "images/Паштет_из_утки__маринованное_яблоко__угорь__бриошь.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 31,
+      "name": "Перепелка со шпинатом и картофельным пюре",
+      "category": "Мясные блюда",
+      "image": "images/Перепелка_со_шпинатом_и_картофельным_пюре.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 32,
+      "name": "Перловая каша с уткой, грибами и черной смородиной",
+      "category": "Мясные блюда",
+      "image": "images/Перловая_каша_с_уткой__грибами_и_черной_смородиной.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 33,
+      "name": "Пожарская котлета с картофельным крокетом и трюфелем",
+      "category": "Мясные блюда",
+      "image": "images/Пожарская_котлета_с_картофельным_крокетом_и_трюфелем.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 34,
+      "name": "Полба с  кебабом из креветок и томатами",
+      "category": "Прочее",
+      "image": "images/Полба_с_кебабом_из_креветок_и_томатами.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 35,
+      "name": "Рёбрышки ягненка",
+      "category": "Прочее",
+      "image": "images/Рёбрышки_ягненка.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 36,
+      "name": "Равиоли с судаком, кинзой и соусом том-ям",
+      "category": "Супы",
+      "image": "images/Равиоли_с_судаком__кинзой_и_соусом_том_ям.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 37,
+      "name": "Ролл Калифорния с крабом",
+      "category": "Рыба и морепродукты",
+      "image": "images/Ролл_Калифорния_с_крабом.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 38,
+      "name": "Ролл краб клубника авокадо",
+      "category": "Рыба и морепродукты",
+      "image": "images/Ролл_краб_клубника_авокадо.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 39,
+      "name": "Ролл Радуга Краб, авокадо, тунец, лосось, креветка, угорь",
+      "category": "Рыба и морепродукты",
+      "image": "images/Ролл_Радуга_Краб__авокадо__тунец__лосось__креветка__угорь.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 40,
+      "name": "Ролл Филадельфия с лососем",
+      "category": "Рыба и морепродукты",
+      "image": "images/Ролл_Филадельфия_с_лососем.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 41,
+      "name": "Руккола с креветками и авокадо",
+      "category": "Рыба и морепродукты",
+      "image": "images/Руккола_с_креветками_и_авокадо.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 42,
+      "name": "Тарт татен с грушей",
+      "category": "Прочее",
+      "image": "images/Тарт_татен_с_грушей.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 43,
+      "name": "Тартар из говядины с чесночным айоли",
+      "category": "Прочее",
+      "image": "images/Тартар_из_говядины_с_чесночным_айоли.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 44,
+      "name": "Том-ям с креветками и шиитаке",
+      "category": "Рыба и морепродукты",
+      "image": "images/Том_ям_с_креветками_и_шиитаке.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 45,
+      "name": "Тунец лосось гребешок креветка красная икра",
+      "category": "Рыба и морепродукты",
+      "image": "images/Тунец_лосось_гребешок_креветка_красная_икра.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 46,
+      "name": "Угорь манго батат",
+      "category": "Рыба и морепродукты",
+      "image": "images/Угорь_манго_батат.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 47,
+      "name": "Угорь, лосось, соус тофу",
+      "category": "Рыба и морепродукты",
+      "image": "images/Угорь__лосось__соус_тофу.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 48,
+      "name": "Фрикадельки с клюквенным соусом и картофельным пюре",
+      "category": "Прочее",
+      "image": "images/Фрикадельки_с_клюквенным_соусом_и_картофельным_пюре.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 49,
+      "name": "Чизкейк Сан Себастьян, малиновый соус, сорбет",
+      "category": "Десерты",
+      "image": "images/Чизкейк_Сан_Себастьян__малиновый_соус__сорбет.png",
+      "image_format": "png",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 50,
+      "name": "Шатобриан",
+      "category": "Мясные блюда",
+      "image": "images/Шатобриан.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 51,
+      "name": "Шаурма Sapiens",
+      "category": "Прочее",
+      "image": "images/Шаурма_Sapiens.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
+    },
+    {
+      "id": 52,
+      "name": "Яблочный пирог с миндалем,  орехом пекан и кремом из фиников",
+      "category": "Десерты",
+      "image": "images/Яблочный_пирог_с_миндалем__орехом_пекан_и_кремом_из_фиников.jpg",
+      "image_format": "jpg",
+      "description": null,
+      "composition": null,
+      "allergens": null
     }
-  ]
+  ],
+  "statistics": {
+    "total_items": 52,
+    "categories_count": 8
+  }
 }

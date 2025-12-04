@@ -1,7 +1,8 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { MenuItem } from './types';
 import { MenuCard } from './MenuCard';
-import { getImageUrl } from './imageMap';
+import { getMenuImageUrl } from '../utils/imageUtils';
 
 interface MenuGridProps {
   items: MenuItem[];
@@ -28,7 +29,11 @@ export function MenuGrid({ items, onItemClick }: MenuGridProps) {
               ease: "easeOut"
             }}
           >
-            <MenuCard item={item} imageUrl={getImageUrl(item.name)} onClick={() => onItemClick(item)} />
+            <MenuCard 
+              item={item} 
+              imageUrl={getMenuImageUrl(item.image)} 
+              onClick={() => onItemClick(item)} 
+            />
           </motion.div>
         ))}
       </motion.div>

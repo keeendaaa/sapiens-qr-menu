@@ -51,20 +51,22 @@ export function MenuCard({ item, imageUrl, onClick }: MenuCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
         {/* Price badge */}
-        <motion.div
-          className="absolute top-3 right-3 px-3 py-1.5 rounded-full shadow-lg text-sm"
-          style={{ backgroundColor: '#212529', color: '#eeecdd' }}
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ 
-            type: "spring",
-            stiffness: 260,
-            damping: 20,
-            delay: 0.1
-          }}
-        >
-          <span style={{ color: '#eeecdd' }}>{item.price} ₽</span>
-        </motion.div>
+        {item.price !== undefined && (
+          <motion.div
+            className="absolute top-3 right-3 px-3 py-1.5 rounded-full shadow-lg text-sm"
+            style={{ backgroundColor: '#212529', color: '#eeecdd' }}
+            initial={{ scale: 0, rotate: -180 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ 
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+              delay: 0.1
+            }}
+          >
+            <span style={{ color: '#eeecdd' }}>{item.price} ₽</span>
+          </motion.div>
+        )}
       </div>
 
       {/* Content */}

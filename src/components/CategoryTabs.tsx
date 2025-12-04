@@ -1,38 +1,36 @@
+import React from 'react';
 import { motion } from 'motion/react';
-import { UtensilsCrossed, Coffee, Cake, Wine } from 'lucide-react';
+import { UtensilsCrossed, Coffee, Cake, Wine, Fish, ChefHat } from 'lucide-react';
 import { Category } from './types';
 
 interface CategoryTabsProps {
   selectedCategory: string;
   onSelectCategory: (category: string) => void;
+  categories?: Category[];
 }
 
-// Категории, которые реально используются (есть блюда)
-const categories: Category[] = [
-  { id: 'all', name: 'Все', icon: 'utensils' },
-  { id: 'appetizers', name: 'Закуски', icon: 'utensils' },
-  { id: 'salads', name: 'Салаты', icon: 'utensils' },
-  { id: 'mains', name: 'Горячие блюда', icon: 'utensils' },
-  { id: 'soups', name: 'Супы', icon: 'utensils' },
-  { id: 'khinkali', name: 'Хинкали', icon: 'utensils' },
-  { id: 'bakery', name: 'Выпечка', icon: 'cake' },
-  { id: 'sauces', name: 'Соусы', icon: 'utensils' },
-];
-
-const iconMap = {
+const iconMap: Record<string, any> = {
   utensils: UtensilsCrossed,
   coffee: Coffee,
   cake: Cake,
   wine: Wine,
+  fish: Fish,
+  chef: ChefHat,
 };
 
-export function CategoryTabs({ selectedCategory, onSelectCategory }: CategoryTabsProps) {
+export function CategoryTabs({ selectedCategory, onSelectCategory, categories = [] }: CategoryTabsProps) {
+  // Добавляем кнопку "Все"
+  const allCategories: Category[] = [
+    { id: 'all', name: 'Все', icon: 'utensils' },
+    ...categories
+  ];
+
   return (
     <div className="sticky top-0 z-40 border-b border-[#212529]/10 shadow-sm" style={{ backgroundColor: '#eeecdd' }}>
       <div className="overflow-x-auto scrollbar-hide">
         <div className="flex gap-2 px-3 py-2.5 min-w-max">
-          {categories.map((category) => {
-            const Icon = iconMap[category.icon as keyof typeof iconMap] || UtensilsCrossed;
+          {allCategories.map((category) => {
+            const Icon = iconMap[category.icon] || UtensilsCrossed;
             const isSelected = selectedCategory === category.id;
             
             return (

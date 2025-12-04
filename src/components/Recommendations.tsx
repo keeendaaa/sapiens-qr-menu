@@ -3,7 +3,6 @@ import { motion } from 'motion/react';
 import { MenuItem } from './types';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { TrendingUp, ChefHat, Clock, Award } from 'lucide-react';
-import { getImageUrl } from './imageMap';
 
 interface RecommendationsProps {
   onItemClick: (item: MenuItem) => void;
@@ -80,32 +79,34 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.4 }}
                 onClick={() => onItemClick(item)}
-                className="flex-shrink-0 w-64 rounded-2xl overflow-hidden shadow-md active:scale-95 transition-transform cursor-pointer"
+                className="flex-shrink-0 w-64 h-64 rounded-2xl overflow-hidden shadow-md active:scale-95 transition-transform cursor-pointer flex flex-col"
                 style={{ backgroundColor: '#eeecdd' }}
               >
-                <div className="relative h-40 overflow-hidden">
-                  {getImageUrl(item.name) ? (
-                    <ImageWithFallback
-                      src={getImageUrl(item.name)}
-                      alt={item.name}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
+                <div className="relative w-full h-48 flex-shrink-0 overflow-hidden">
+                    {false ? (
+                      <ImageWithFallback
+                        src=""
+                        alt={item.name}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
                     <div className="w-full h-full flex items-center justify-center" style={{ backgroundColor: '#eeecdd' }}>
                       <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#212529', opacity: 0.1 }}>
                         <svg className="w-6 h-6" style={{ color: '#212529', opacity: 0.3 }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                        </svg>
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                          </svg>
+                        </div>
                       </div>
+                    )}
+                  {item.price !== undefined && (
+                    <div className="absolute top-3 right-3 px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm" style={{ backgroundColor: 'rgba(238, 236, 221, 0.95)' }}>
+                      <span style={{ color: '#212529' }}>{item.price} ₽</span>
                     </div>
                   )}
-                  <div className="absolute top-3 right-3 px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm" style={{ backgroundColor: 'rgba(238, 236, 221, 0.95)' }}>
-                    <span style={{ color: '#212529' }}>{item.price} ₽</span>
-                  </div>
                 </div>
-                <div className="p-4">
+                <div className="p-4 flex-1 flex flex-col justify-center min-h-0" style={{ height: '64px' }}>
                   <h3 className="font-medium mb-1 line-clamp-1" style={{ color: '#212529' }}>{item.name}</h3>
-                  <p className="text-sm line-clamp-2" style={{ color: '#212529', opacity: 0.7 }}>{item.description}</p>
+                  <p className="text-sm line-clamp-1" style={{ color: '#212529', opacity: 0.7 }}>{item.description || ''}</p>
                 </div>
               </motion.div>
             ))}
@@ -142,9 +143,9 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
               style={{ backgroundColor: '#eeecdd' }}
             >
               <div className="relative h-32 overflow-hidden">
-                {getImageUrl(item.name) ? (
+                {false ? (
                   <ImageWithFallback
-                    src={getImageUrl(item.name)}
+                    src=""
                     alt={item.name}
                     className="w-full h-full object-cover"
                   />
@@ -165,7 +166,9 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
               <div className="p-3">
                 <h3 className="text-sm font-medium mb-1 line-clamp-1" style={{ color: '#212529' }}>{item.name}</h3>
                 <p className="text-xs mb-2 line-clamp-2" style={{ color: '#212529', opacity: 0.7 }}>{item.description}</p>
-                <span style={{ color: '#212529' }}>{item.price} ₽</span>
+                {item.price !== undefined && (
+                  <span style={{ color: '#212529' }}>{item.price} ₽</span>
+                )}
               </div>
             </motion.div>
           ))}
@@ -183,12 +186,12 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
           <div className="p-2.5 rounded-xl shadow-lg" style={{ backgroundColor: '#212529' }}>
             <Clock className="w-5 h-5" style={{ color: '#eeecdd' }} />
           </div>
-          <div>
+                    <div>
             <h2 className="text-xl font-semibold" style={{ color: '#212529' }}>Быстрые блюда</h2>
             <p className="text-xs" style={{ color: '#212529', opacity: 0.7 }}>Приготовим за 15 минут</p>
           </div>
-        </div>
-
+                    </div>
+                    
         <div className="overflow-x-auto -mx-3 px-3 scrollbar-hide">
           <div className="flex gap-3 pb-2 min-w-max">
             {recommendations.quick.map((item, index) => (
@@ -202,9 +205,9 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
                 style={{ backgroundColor: '#eeecdd' }}
               >
                 <div className="relative h-40 overflow-hidden">
-                  {getImageUrl(item.name) ? (
+                  {false ? (
                     <ImageWithFallback
-                      src={getImageUrl(item.name)}
+                      src=""
                       alt={item.name}
                       className="w-full h-full object-cover"
                     />
@@ -217,9 +220,11 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
                       </div>
                     </div>
                   )}
-                  <div className="absolute top-3 right-3 px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm" style={{ backgroundColor: 'rgba(238, 236, 221, 0.95)' }}>
-                    <span style={{ color: '#212529' }}>{item.price} ₽</span>
-                  </div>
+                  {item.price !== undefined && (
+                    <div className="absolute top-3 right-3 px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm" style={{ backgroundColor: 'rgba(238, 236, 221, 0.95)' }}>
+                      <span style={{ color: '#212529' }}>{item.price} ₽</span>
+                    </div>
+                  )}
                   <div className="absolute top-3 left-3 px-2 py-0.5 rounded-full text-[10px] flex items-center gap-1" style={{ backgroundColor: '#212529', opacity: 0.8, color: '#eeecdd' }}>
                     <Clock className="w-2.5 h-2.5" />
                     <span>15 мин</span>
@@ -227,7 +232,7 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
                 </div>
                 <div className="p-4">
                   <h3 className="font-medium mb-1 line-clamp-1" style={{ color: '#212529' }}>{item.name}</h3>
-                  <p className="text-sm line-clamp-2" style={{ color: '#212529', opacity: 0.7 }}>{item.description}</p>
+                  <p className="text-sm line-clamp-2" style={{ color: '#212529', opacity: 0.7 }}>{item.description || ''}</p>
                 </div>
               </motion.div>
             ))}
@@ -265,9 +270,9 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
             }}
           >
             <div className="relative h-48 overflow-hidden">
-              {getImageUrl(item.name) ? (
+              {false ? (
                 <ImageWithFallback
-                  src={getImageUrl(item.name)}
+                  src=""
                   alt={item.name}
                   className="w-full h-full object-cover"
                 />
@@ -292,7 +297,9 @@ export function Recommendations({ onItemClick, menuItems }: RecommendationsProps
             </div>
             <div className="p-4" style={{ backgroundColor: '#eeecdd' }}>
               <div className="flex items-center justify-between">
-                <span style={{ color: '#212529' }}>{item.price} ₽</span>
+                {item.price !== undefined && (
+                  <span style={{ color: '#212529' }}>{item.price} ₽</span>
+                )}
                 <span className="text-xs" style={{ color: '#212529', opacity: 0.6 }}>Нажмите для подробностей</span>
               </div>
             </div>

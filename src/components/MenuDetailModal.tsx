@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { MenuItem } from './types';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { X } from 'lucide-react';
-import { getImageUrl } from './imageMap';
+import { getMenuImageUrl } from '../utils/imageUtils';
 
 interface MenuDetailModalProps {
   item: MenuItem;
@@ -63,9 +63,9 @@ export function MenuDetailModal({ item, menuItems, onClose, onItemClick }: MenuD
 
           {/* Image */}
           <div className="relative h-64 overflow-hidden bg-gradient-to-br from-[#212529]/5 to-[#eeecdd]">
-            {getImageUrl(item.name) ? (
+            {item.image ? (
               <ImageWithFallback
-                src={getImageUrl(item.name)}
+                src={getMenuImageUrl(item.image)}
                 alt={item.name}
                 className="w-full h-full object-cover"
               />
@@ -88,9 +88,11 @@ export function MenuDetailModal({ item, menuItems, onClose, onItemClick }: MenuD
           <div className="p-5">
             <div className="flex items-start justify-between gap-3 mb-3">
               <h2 className="text-[#212529]">{item.name}</h2>
-              <div className="px-3 py-1.5 rounded-full shrink-0 text-sm" style={{ backgroundColor: '#212529', color: '#eeecdd' }}>
-                <span style={{ color: '#eeecdd' }}>{item.price} ₽</span>
-              </div>
+              {item.price !== undefined && (
+                <div className="px-3 py-1.5 rounded-full shrink-0 text-sm" style={{ backgroundColor: '#212529', color: '#eeecdd' }}>
+                  <span style={{ color: '#eeecdd' }}>{item.price} ₽</span>
+                </div>
+              )}
             </div>
 
             {item.description && (
@@ -114,9 +116,9 @@ export function MenuDetailModal({ item, menuItems, onClose, onItemClick }: MenuD
                       whileTap={{ scale: 0.97 }}
                     >
                       <div className="relative h-24 overflow-hidden bg-gradient-to-br from-[#212529]/5 to-[#eeecdd]">
-                        {getImageUrl(similarItem.name) ? (
+                        {similarItem.image ? (
                           <ImageWithFallback
-                            src={getImageUrl(similarItem.name)}
+                            src={getMenuImageUrl(similarItem.image)}
                             alt={similarItem.name}
                             className="w-full h-full object-cover"
                           />
@@ -134,9 +136,11 @@ export function MenuDetailModal({ item, menuItems, onClose, onItemClick }: MenuD
                         <h4 className="text-[#212529] text-xs font-medium line-clamp-2 mb-1">
                           {similarItem.name}
                         </h4>
-                        <p className="text-[#212529] text-xs font-semibold">
-                          {similarItem.price} ₽
-                        </p>
+                        {similarItem.price !== undefined && (
+                          <p className="text-[#212529] text-xs font-semibold">
+                            {similarItem.price} ₽
+                          </p>
+                        )}
                       </div>
                     </motion.div>
                   ))}
